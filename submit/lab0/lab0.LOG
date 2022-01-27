@@ -1,0 +1,650 @@
+Script started on 2022-01-27 12:08:52-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004htman1@remote06:~/cs471/tmp/lab0$ [Ktman1@remote06:~/cs471/tmp/lab0$ ls ~/.ssh
+[?2004lid_rsa	id_rsa.pub  known_hosts
+[?2004htman1@remote06:~/cs471/tmp/lab0$ ls kn[K[K[K[K[Kcat kno[K[K[K~/[K[K[K[K[K[Ksl[K[Kls ~/.ssh/
+id_rsa       id_rsa.pub   known_hosts  
+tman1@remote06:~/cs471/tmp/lab0$ ls ~/.ssh/known_hosts lab0.LOG lab0.LOG [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004l/home/tman1/.ssh/known_hosts
+[?2004htman1@remote06:~/cs471/tmp/lab0$ ls ~/.ssh/known_hosts[C[1P ~/.ssh/known_hosts[1P ~/.ssh/known_hostsc ~/.ssh/known_hostst ~/.ssh/known_hosts[1P ~/.ssh/known_hostsa ~/.ssh/known_hostst ~/.ssh/known_hosts
+[?2004l|1|mqzuwSmcwDEOmhbcFIKSqgMb9i0=|saQ4yUg0ASdmYyKp1NfRNwfe/bE= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+|1|/FJctqDDj2VvLXEXee2f10ZIUUI=|FPpOITqW301JyctMsDIXfPKfy9w= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+[?2004htman1@remote06:~/cs471/tmp/lab0$ ssh-
+ssh-add      ssh-agent    ssh-argv0    ssh-copy-id  ssh-keygen   ssh-keyscan  
+tman1@remote06:~/cs471/tmp/lab0$ ssh-
+ssh-add      ssh-agent    ssh-argv0    ssh-copy-id  ssh-keygen   ssh-keyscan  
+tman1@remote06:~/cs471/tmp/lab0$ ssh-copy-id tman1@remote
+[?2004l/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/tman1/.ssh/id_rsa.pub"
+The authenticity of host 'remote (128.226.114.198)' can't be established.
+ECDSA key fingerprint is SHA256:UEIh1TASIC96TC1hhxVbkVS0DrddNKHk7Q2nzgDCt+Y.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+tman1@remote's password: 
+Permission denied, please try again.
+tman1@remote's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'tman1@remote'"
+and check to make sure that only the key(s) you wanted were added.
+
+[?2004htman1@remote06:~/cs471/tmp/lab0$ cd ./[K./lab0/lab0.LOG [K[K[K[K[K[K[K[K[K[K[K[K[K[K../tmp/[K[K[K[K[K[K[K[K[K[K[K[K[Kls ../lab0/lab0.LOG [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K../../tmp/[K[K[K[K
+[?2004ltmp
+[?2004htman1@remote06:~/cs471/tmp/lab0$ ls ../../../
+[?2004lcs240  cs350  cs427  cs440  cs471  Desktop    Downloads    i220b  Music     Public     tmp
+cs320  cs375  cs428  cs451  cs476  Documents  hello_cargo  i240b  Pictures  Templates  Videos
+[?2004htman1@remote06:~/cs471/tmp/lab0$ cd ../../
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004ltmp
+[?2004htman1@remote06:~/cs471$ mkdir -p projects
+[?2004l[?2004htman1@remote06:~/cs471$ cd projects/
+[?2004l[?2004htman1@remote06:~/cs471/projects$ git clone ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.gi[1Pt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1@remote.cs.binghamton.edu/~umrigar/git-repos/cs471.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004lCloning into 'cs471'...
+The authenticity of host 'remote.cs.binghamton.edu (128.226.114.198)' can't be established.
+ECDSA key fingerprint is SHA256:UEIh1TASIC96TC1hhxVbkVS0DrddNKHk7Q2nzgDCt+Y.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'remote.cs.binghamton.edu' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 158, done.[K
+remote: Counting objects:   0% (1/158)[Kremote: Counting objects:   1% (2/158)[Kremote: Counting objects:   2% (4/158)[Kremote: Counting objects:   3% (5/158)[Kremote: Counting objects:   4% (7/158)[Kremote: Counting objects:   5% (8/158)[Kremote: Counting objects:   6% (10/158)[Kremote: Counting objects:   7% (12/158)[Kremote: Counting objects:   8% (13/158)[Kremote: Counting objects:   9% (15/158)[Kremote: Counting objects:  10% (16/158)[Kremote: Counting objects:  11% (18/158)[Kremote: Counting objects:  12% (19/158)[Kremote: Counting objects:  13% (21/158)[Kremote: Counting objects:  14% (23/158)[Kremote: Counting objects:  15% (24/158)[Kremote: Counting objects:  16% (26/158)[Kremote: Counting objects:  17% (27/158)[Kremote: Counting objects:  18% (29/158)[Kremote: Counting objects:  19% (31/158)[Kremote: Counting objects:  20% (32/158)[Kremote: Counting objects:  21% (34/158)[Kremote: Counting objects:  22% (35/158)[Kremote: Counting objects:  23% (37/158)[Kremote: Counting objects:  24% (38/158)[Kremote: Counting objects:  25% (40/158)[Kremote: Counting objects:  26% (42/158)[Kremote: Counting objects:  27% (43/158)[Kremote: Counting objects:  28% (45/158)[Kremote: Counting objects:  29% (46/158)[Kremote: Counting objects:  30% (48/158)[Kremote: Counting objects:  31% (49/158)[Kremote: Counting objects:  32% (51/158)[Kremote: Counting objects:  33% (53/158)[Kremote: Counting objects:  34% (54/158)[Kremote: Counting objects:  35% (56/158)[Kremote: Counting objects:  36% (57/158)[Kremote: Counting objects:  37% (59/158)[Kremote: Counting objects:  38% (61/158)[Kremote: Counting objects:  39% (62/158)[Kremote: Counting objects:  40% (64/158)[Kremote: Counting objects:  41% (65/158)[Kremote: Counting objects:  42% (67/158)[Kremote: Counting objects:  43% (68/158)[Kremote: Counting objects:  44% (70/158)[Kremote: Counting objects:  45% (72/158)[Kremote: Counting objects:  46% (73/158)[Kremote: Counting objects:  47% (75/158)[Kremote: Counting objects:  48% (76/158)[Kremote: Counting objects:  49% (78/158)[Kremote: Counting objects:  50% (79/158)[Kremote: Counting objects:  51% (81/158)[Kremote: Counting objects:  52% (83/158)[Kremote: Counting objects:  53% (84/158)[Kremote: Counting objects:  54% (86/158)[Kremote: Counting objects:  55% (87/158)[Kremote: Counting objects:  56% (89/158)[Kremote: Counting objects:  57% (91/158)[Kremote: Counting objects:  58% (92/158)[Kremote: Counting objects:  59% (94/158)[Kremote: Counting objects:  60% (95/158)[Kremote: Counting objects:  61% (97/158)[Kremote: Counting objects:  62% (98/158)[Kremote: Counting objects:  63% (100/158)[Kremote: Counting objects:  64% (102/158)[Kremote: Counting objects:  65% (103/158)[Kremote: Counting objects:  66% (105/158)[Kremote: Counting objects:  67% (106/158)[Kremote: Counting objects:  68% (108/158)[Kremote: Counting objects:  69% (110/158)[Kremote: Counting objects:  70% (111/158)[Kremote: Counting objects:  71% (113/158)[Kremote: Counting objects:  72% (114/158)[Kremote: Counting objects:  73% (116/158)[Kremote: Counting objects:  74% (117/158)[Kremote: Counting objects:  75% (119/158)[Kremote: Counting objects:  76% (121/158)[Kremote: Counting objects:  77% (122/158)[Kremote: Counting objects:  78% (124/158)[Kremote: Counting objects:  79% (125/158)[Kremote: Counting objects:  80% (127/158)[Kremote: Counting objects:  81% (128/158)[Kremote: Counting objects:  82% (130/158)[Kremote: Counting objects:  83% (132/158)[Kremote: Counting objects:  84% (133/158)[Kremote: Counting objects:  85% (135/158)[Kremote: Counting objects:  86% (136/158)[Kremote: Counting objects:  87% (138/158)[Kremote: Counting objects:  88% (140/158)[Kremote: Counting objects:  89% (141/158)[Kremote: Counting objects:  90% (143/158)[Kremote: Counting objects:  91% (144/158)[Kremote: Counting objects:  92% (146/158)[Kremote: Counting objects:  93% (147/158)[Kremote: Counting objects:  94% (149/158)[Kremote: Counting objects:  95% (151/158)[Kremote: Counting objects:  96% (152/158)[Kremote: Counting objects:  97% (154/158)[Kremote: Counting objects:  98% (155/158)[Kremote: Counting objects:  99% (157/158)[Kremote: Counting objects: 100% (158/158)[Kremote: Counting objects: 100% (158/158), done.[K
+remote: Compressing objects:   0% (1/149)[Kremote: Compressing objects:   1% (2/149)[Kremote: Compressing objects:   2% (3/149)[Kremote: Compressing objects:   3% (5/149)[Kremote: Compressing objects:   4% (6/149)[Kremote: Compressing objects:   5% (8/149)[Kremote: Compressing objects:   6% (9/149)[Kremote: Compressing objects:   7% (11/149)[Kremote: Compressing objects:   8% (12/149)[Kremote: Compressing objects:   9% (14/149)[Kremote: Compressing objects:  10% (15/149)[Kremote: Compressing objects:  11% (17/149)[Kremote: Compressing objects:  12% (18/149)[Kremote: Compressing objects:  13% (20/149)[Kremote: Compressing objects:  14% (21/149)[Kremote: Compressing objects:  15% (23/149)[Kremote: Compressing objects:  16% (24/149)[Kremote: Compressing objects:  17% (26/149)[Kremote: Compressing objects:  18% (27/149)[Kremote: Compressing objects:  19% (29/149)[Kremote: Compressing objects:  20% (30/149)[Kremote: Compressing objects:  21% (32/149)[Kremote: Compressing objects:  22% (33/149)[Kremote: Compressing objects:  23% (35/149)[Kremote: Compressing objects:  24% (36/149)[Kremote: Compressing objects:  25% (38/149)[Kremote: Compressing objects:  26% (39/149)[Kremote: Compressing objects:  27% (41/149)[Kremote: Compressing objects:  28% (42/149)[Kremote: Compressing objects:  29% (44/149)[Kremote: Compressing objects:  30% (45/149)[Kremote: Compressing objects:  31% (47/149)[Kremote: Compressing objects:  32% (48/149)[Kremote: Compressing objects:  33% (50/149)[Kremote: Compressing objects:  34% (51/149)[Kremote: Compressing objects:  35% (53/149)[Kremote: Compressing objects:  36% (54/149)[Kremote: Compressing objects:  37% (56/149)[Kremote: Compressing objects:  38% (57/149)[Kremote: Compressing objects:  39% (59/149)[Kremote: Compressing objects:  40% (60/149)[Kremote: Compressing objects:  41% (62/149)[Kremote: Compressing objects:  42% (63/149)[Kremote: Compressing objects:  43% (65/149)[Kremote: Compressing objects:  44% (66/149)[Kremote: Compressing objects:  45% (68/149)[Kremote: Compressing objects:  46% (69/149)[Kremote: Compressing objects:  47% (71/149)[Kremote: Compressing objects:  48% (72/149)[Kremote: Compressing objects:  49% (74/149)[Kremote: Compressing objects:  50% (75/149)[Kremote: Compressing objects:  51% (76/149)[Kremote: Compressing objects:  52% (78/149)[Kremote: Compressing objects:  53% (79/149)[Kremote: Compressing objects:  54% (81/149)[Kremote: Compressing objects:  55% (82/149)[Kremote: Compressing objects:  56% (84/149)[Kremote: Compressing objects:  57% (85/149)[Kremote: Compressing objects:  58% (87/149)[Kremote: Compressing objects:  59% (88/149)[Kremote: Compressing objects:  60% (90/149)[Kremote: Compressing objects:  61% (91/149)[Kremote: Compressing objects:  62% (93/149)[Kremote: Compressing objects:  63% (94/149)[Kremote: Compressing objects:  64% (96/149)[Kremote: Compressing objects:  65% (97/149)[Kremote: Compressing objects:  66% (99/149)[Kremote: Compressing objects:  67% (100/149)[Kremote: Compressing objects:  68% (102/149)[Kremote: Compressing objects:  69% (103/149)[Kremote: Compressing objects:  70% (105/149)[Kremote: Compressing objects:  71% (106/149)[Kremote: Compressing objects:  72% (108/149)[Kremote: Compressing objects:  73% (109/149)[Kremote: Compressing objects:  74% (111/149)[Kremote: Compressing objects:  75% (112/149)[Kremote: Compressing objects:  76% (114/149)[Kremote: Compressing objects:  77% (115/149)[Kremote: Compressing objects:  78% (117/149)[Kremote: Compressing objects:  79% (118/149)[Kremote: Compressing objects:  80% (120/149)[Kremote: Compressing objects:  81% (121/149)[Kremote: Compressing objects:  82% (123/149)[Kremote: Compressing objects:  83% (124/149)[Kremote: Compressing objects:  84% (126/149)[Kremote: Compressing objects:  85% (127/149)[Kremote: Compressing objects:  86% (129/149)[Kremote: Compressing objects:  87% (130/149)[Kremote: Compressing objects:  88% (132/149)[Kremote: Compressing objects:  89% (133/149)[Kremote: Compressing objects:  90% (135/149)[Kremote: Compressing objects:  91% (136/149)[Kremote: Compressing objects:  92% (138/149)[Kremote: Compressing objects:  93% (139/149)[Kremote: Compressing objects:  94% (141/149)[Kremote: Compressing objects:  95% (142/149)[Kremote: Compressing objects:  96% (144/149)[Kremote: Compressing objects:  97% (145/149)[Kremote: Compressing objects:  98% (147/149)[Kremote: Compressing objects:  99% (148/149)[Kremote: Compressing objects: 100% (149/149)[Kremote: Compressing objects: 100% (149/149), done.[K
+Receiving objects:   0% (1/158)Receiving objects:   1% (2/158)Receiving objects:   2% (4/158)Receiving objects:   3% (5/158)Receiving objects:   4% (7/158)Receiving objects:   5% (8/158)Receiving objects:   6% (10/158)Receiving objects:   7% (12/158)Receiving objects:   8% (13/158)Receiving objects:   9% (15/158)Receiving objects:  10% (16/158)Receiving objects:  11% (18/158)Receiving objects:  12% (19/158)Receiving objects:  13% (21/158)Receiving objects:  14% (23/158)Receiving objects:  15% (24/158)Receiving objects:  16% (26/158)Receiving objects:  17% (27/158)Receiving objects:  18% (29/158)Receiving objects:  19% (31/158)Receiving objects:  20% (32/158)Receiving objects:  21% (34/158)Receiving objects:  22% (35/158)Receiving objects:  23% (37/158)Receiving objects:  24% (38/158)Receiving objects:  25% (40/158)Receiving objects:  26% (42/158)Receiving objects:  27% (43/158)Receiving objects:  28% (45/158)Receiving objects:  29% (46/158)Receiving objects:  30% (48/158)Receiving objects:  31% (49/158)Receiving objects:  32% (51/158)Receiving objects:  33% (53/158)Receiving objects:  34% (54/158)Receiving objects:  35% (56/158)Receiving objects:  36% (57/158)Receiving objects:  37% (59/158)Receiving objects:  38% (61/158)Receiving objects:  39% (62/158)Receiving objects:  40% (64/158)Receiving objects:  41% (65/158)Receiving objects:  42% (67/158)Receiving objects:  43% (68/158)Receiving objects:  44% (70/158)Receiving objects:  45% (72/158)Receiving objects:  46% (73/158)Receiving objects:  47% (75/158)Receiving objects:  48% (76/158)Receiving objects:  49% (78/158)Receiving objects:  50% (79/158)Receiving objects:  51% (81/158)Receiving objects:  52% (83/158)Receiving objects:  53% (84/158)Receiving objects:  54% (86/158)Receiving objects:  55% (87/158)Receiving objects:  56% (89/158)Receiving objects:  57% (91/158)Receiving objects:  58% (92/158)Receiving objects:  59% (94/158)Receiving objects:  60% (95/158)Receiving objects:  61% (97/158)Receiving objects:  62% (98/158)Receiving objects:  63% (100/158)Receiving objects:  64% (102/158)Receiving objects:  65% (103/158)Receiving objects:  66% (105/158)Receiving objects:  67% (106/158)Receiving objects:  68% (108/158)Receiving objects:  69% (110/158)Receiving objects:  70% (111/158)Receiving objects:  71% (113/158)Receiving objects:  72% (114/158)Receiving objects:  73% (116/158)Receiving objects:  74% (117/158)Receiving objects:  75% (119/158)Receiving objects:  76% (121/158)Receiving objects:  77% (122/158)Receiving objects:  78% (124/158)Receiving objects:  79% (125/158)Receiving objects:  80% (127/158)Receiving objects:  81% (128/158)Receiving objects:  82% (130/158)Receiving objects:  83% (132/158)Receiving objects:  84% (133/158)Receiving objects:  85% (135/158)Receiving objects:  86% (136/158)Receiving objects:  87% (138/158)Receiving objects:  88% (140/158)Receiving objects:  89% (141/158)Receiving objects:  90% (143/158)Receiving objects:  91% (144/158)Receiving objects:  92% (146/158)remote: Total 158 (delta 44), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:  93% (147/158)Receiving objects:  94% (149/158)Receiving objects:  95% (151/158)Receiving objects:  96% (152/158)Receiving objects:  97% (154/158)Receiving objects:  98% (155/158)Receiving objects:  99% (157/158)Receiving objects: 100% (158/158)Receiving objects: 100% (158/158), 685.80 KiB | 6.79 MiB/s, done.
+Resolving deltas:   0% (0/44)Resolving deltas:   2% (1/44)Resolving deltas:   4% (2/44)Resolving deltas:   6% (3/44)Resolving deltas:   9% (4/44)Resolving deltas:  11% (5/44)Resolving deltas:  13% (6/44)Resolving deltas:  15% (7/44)Resolving deltas:  18% (8/44)Resolving deltas:  20% (9/44)Resolving deltas:  22% (10/44)Resolving deltas:  25% (11/44)Resolving deltas:  27% (12/44)Resolving deltas:  29% (13/44)Resolving deltas:  31% (14/44)Resolving deltas:  34% (15/44)Resolving deltas:  36% (16/44)Resolving deltas:  38% (17/44)Resolving deltas:  40% (18/44)Resolving deltas:  43% (19/44)Resolving deltas:  45% (20/44)Resolving deltas:  47% (21/44)Resolving deltas:  50% (22/44)Resolving deltas:  52% (23/44)Resolving deltas:  54% (24/44)Resolving deltas:  56% (25/44)Resolving deltas:  59% (26/44)Resolving deltas:  61% (27/44)Resolving deltas:  63% (28/44)Resolving deltas:  65% (29/44)Resolving deltas:  68% (30/44)Resolving deltas:  70% (31/44)Resolving deltas:  72% (32/44)Resolving deltas:  75% (33/44)Resolving deltas:  77% (34/44)Resolving deltas:  79% (35/44)Resolving deltas:  81% (36/44)Resolving deltas:  84% (37/44)Resolving deltas:  86% (38/44)Resolving deltas:  88% (39/44)Resolving deltas:  90% (40/44)Resolving deltas:  93% (41/44)Resolving deltas:  95% (42/44)Resolving deltas:  97% (43/44)Resolving deltas: 100% (44/44)Resolving deltas: 100% (44/44), done.
+[?2004htman1@remote06:~/cs471/projects$ f[Kclear
+[?2004l[H[2J[3J[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471
+[?2004htman1@remote06:~/cs471/projects$ cd ../[K[K[K[K[K[Kcd 
+[?2004l[?2004htman1@remote06:~$ cd ..
+[?2004l[?2004htman1@remote06:/home$ ls
+[?2004lls: cannot open directory '.': Permission denied
+[?2004htman1@remote06:/home$ cd [K[K[Kcd ~
+[?2004l[?2004htman1@remote06:~$ ls
+[?2004lcs240  cs350  cs427  cs440  cs471  Desktop    Downloads    i220b  Music     Public     tmp
+cs320  cs375  cs428  cs451  cs476  Documents  hello_cargo  i240b  Pictures  Templates  Videos
+[?2004htman1@remote06:~$ cd cs467[K[K71``[K[K/
+[?2004l[?2004htman1@remote06:~/cs471$ ;s[K[Kls
+[?2004lprojects  tmp
+[?2004htman1@remote06:~/cs471$ cd [K[K[Kls
+[?2004lprojects  tmp
+[?2004htman1@remote06:~/cs471$ cd projects/
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471
+[?2004htman1@remote06:~/cs471/projects$ cd [K cs471/
+[?2004l[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471/projects$ l
+[?2004lbash: l: command not found
+[?2004htman1@remote06:~/cs471/projects$ s[Kls
+[?2004lcs471
+[?2004htman1@remote06:~/cs471/projects$ cd ~
+[?2004l[?2004htman1@remote06:~$ ls
+[?2004lcs240  cs350  cs427  cs440  cs471  Desktop    Downloads    i220b  Music     Public     tmp
+cs320  cs375  cs428  cs451  cs476  Documents  hello_cargo  i240b  Pictures  Templates  Videos
+[?2004htman1@remote06:~$ ln [K[K[Kcd cs47`[K1
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004lprojects  tmp
+[?2004htman1@remote06:~/cs471$ ln a[K-s projects/cs471/ .
+[?2004l[?2004htman1@remote06:~/cs471$ git status
+[?2004lOn branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m../.ICEauthority[m
+	[31m../.Xauthority[m
+	[31m../.bash_history[m
+	[31m../.cache/[m
+	[31m../.cargo/[m
+	[31m../.config/[m
+	[31m../.dmrc[m
+	[31m../.dosbox/[m
+	[31m../.emacs[m
+	[31m../.emacs.d/[m
+	[31m../.forward[m
+	[31m../.git-credentials[m
+	[31m../.gitconfig[m
+	[31m../.gnome/[m
+	[31m../.gnupg/[m
+	[31m../.gnuplot-wxt[m
+	[31m../.gradle/[m
+	[31m../.java/[m
+	[31m../.lesshst[m
+	[31m../.local/[m
+	[31m../.m2/[m
+	[31m../.mozilla/[m
+	[31m../.neo4j/[m
+	[31m../.pki/[m
+	[31m../.practice.c.swp[m
+	[31m../.profile[m
+	[31m../.rustup/[m
+	[31m../.ssh/[m
+	[31m../.swp[m
+	[31m../.vim/[m
+	[31m../.viminfo[m
+	[31m../.xfce4-session.verbose-log[m
+	[31m../.xfce4-session.verbose-log.last[m
+	[31m../.xsession-errors[m
+	[31m../.xsession-errors.old[m
+	[31m../.zshenv[m
+	[31m../Downloads/[m
+	[31m../cs240/[m
+	[31m../cs320/[m
+	[31m../cs350/[m
+	[31m../cs375/[m
+	[31m../cs428/[m
+	[31m../cs440/[m
+	[31m../cs451/[m
+	[31m./[m
+	[31m../cs476/[m
+	[31m../hello_cargo/[m
+	[31m../i220b/[m
+	[31m../i240b/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004htman1@remote06:~/cs471$ cd ..
+[?2004l[?2004htman1@remote06:~$ git s[K[K status
+[?2004lOn branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.ICEauthority[m
+	[31m.Xauthority[m
+	[31m.bash_history[m
+	[31m.cache/[m
+	[31m.cargo/[m
+	[31m.config/[m
+	[31m.dmrc[m
+	[31m.dosbox/[m
+	[31m.emacs[m
+	[31m.emacs.d/[m
+	[31m.forward[m
+	[31m.git-credentials[m
+	[31m.gitconfig[m
+	[31m.gnome/[m
+	[31m.gnupg/[m
+	[31m.gnuplot-wxt[m
+	[31m.gradle/[m
+	[31m.java/[m
+	[31m.lesshst[m
+	[31m.local/[m
+	[31m.m2/[m
+	[31m.mozilla/[m
+	[31m.neo4j/[m
+	[31m.pki/[m
+	[31m.practice.c.swp[m
+	[31m.profile[m
+	[31m.rustup/[m
+	[31m.ssh/[m
+	[31m.swp[m
+	[31m.vim/[m
+	[31m.viminfo[m
+	[31m.xfce4-session.verbose-log[m
+	[31m.xfce4-session.verbose-log.last[m
+	[31m.xsession-errors[m
+	[31m.xsession-errors.old[m
+	[31m.zshenv[m
+	[31mDownloads/[m
+	[31mcs240/[m
+	[31mcs320/[m
+	[31mcs350/[m
+	[31mcs375/[m
+	[31mcs428/[m
+	[31mcs440/[m
+	[31mcs451/[m
+	[31mcs471/[m
+	[31mcs476/[m
+	[31mhello_cargo/[m
+	[31mi220b/[m
+	[31mi240b/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004htman1@remote06:~$ cd cs
+cs240/ cs320/ cs350/ cs375/ cs427/ cs428/ cs440/ cs451/ cs471/ cs476/ 
+tman1@remote06:~$ cd cs42[K[K350
+[?2004l[?2004htman1@remote06:~/cs350$ ls
+[?2004llab1  lab2  prj1  prj2	prj3
+[?2004htman1@remote06:~/cs350$ git status -s
+[?2004l[31m??[m ../.ICEauthority
+[31m??[m ../.Xauthority
+[31m??[m ../.bash_history
+[31m??[m ../.cache/
+[31m??[m ../.cargo/
+[31m??[m ../.config/
+[31m??[m ../.dmrc
+[31m??[m ../.dosbox/
+[31m??[m ../.emacs
+[31m??[m ../.emacs.d/
+[31m??[m ../.forward
+[31m??[m ../.git-credentials
+[31m??[m ../.gitconfig
+[31m??[m ../.gnome/
+[31m??[m ../.gnupg/
+[31m??[m ../.gnuplot-wxt
+[31m??[m ../.gradle/
+[31m??[m ../.java/
+[31m??[m ../.lesshst
+[31m??[m ../.local/
+[31m??[m ../.m2/
+[31m??[m ../.mozilla/
+[31m??[m ../.neo4j/
+[31m??[m ../.pki/
+[31m??[m ../.practice.c.swp
+[31m??[m ../.profile
+[31m??[m ../.rustup/
+[31m??[m ../.ssh/
+[31m??[m ../.swp
+[31m??[m ../.vim/
+[31m??[m ../.viminfo
+[31m??[m ../.xfce4-session.verbose-log
+[31m??[m ../.xfce4-session.verbose-log.last
+[31m??[m ../.xsession-errors
+[31m??[m ../.xsession-errors.old
+[31m??[m ../.zshenv
+[31m??[m ../Downloads/
+[31m??[m ../cs240/
+[31m??[m ../cs320/
+[31m??[m ./
+[31m??[m ../cs375/
+[31m??[m ../cs428/
+[31m??[m ../cs440/
+[31m??[m ../cs451/
+[31m??[m ../cs471/
+[31m??[m ../cs476/
+[31m??[m ../hello_cargo/
+[31m??[m ../i220b/
+[31m??[m ../i240b/
+[?2004htman1@remote06:~/cs350$ cd ~/cs [K471
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ cd cs4`
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004htman1@remote06:~/cs471$ cd cs471
+[?2004l[?2004htman1@remote06:~/cs471/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/cs471$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ cd c[Kprojects/cs471/
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471$ cd projects/cs471/
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471$ cd projects/cs471/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcdc [K [K[K po[Krojects/cs471/
+[?2004l[?2004htman1@remote06:~/cs471/projects/cs471$ git pull
+[?2004lAlready up to date.
+[?2004htman1@remote06:~/cs471/projects/cs471$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004htman1@remote06:~/cs471/projects/cs471$ cd ../../cs471
+[?2004l[?2004htman1@remote06:~/cs471/cs471$ git status -s
+[?2004l[?2004htman1@remote06:~/cs471/cs471$ git status -s[K[K[K
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004htman1@remote06:~/cs471/cs471$ git pull
+[?2004lAlready up to date.
+[?2004htman1@remote06:~/cs471/cs471$ cd ../projects/cs471/
+[?2004l[?2004htman1@remote06:~/cs471/projects/cs471$ git log -5
+[?2004l[?1h=[33mcommit 9d65b43113fd1d2f3367e2631f8e5483572375dd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Thu Jan 27 09:51:34 2022 -0500[m
+[m
+    class video links[m
+[m
+[33mcommit 7bdc1773d317bd9dd009aad993fe104841fcc6da[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 15:37:58 2022 -0500[m
+[m
+    minor post-class correction[m
+[m
+[33mcommit 2d124a3bb310eaa8c766ae0a072a0d1f040cecfd[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 12:56:40 2022 -0500[m
+[m
+    more tweaks[m
+[m
+[33mcommit c819f6e4122eabfc4c1c130fecbf4ae8c5ea06f3[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 12:07:03 2022 -0500[m
+[m
+    tweaks[m
+[m
+[33mcommit 0182f464eb50fc3cb7d1ffc6b7254155403132ea[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 01:54:12 2022 -0500[m
+[m
+    fix slides index page[m
+[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0.u[K[K[K[K[K[K
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up[K[K[K[K[K[K[K[K[K[K[Kstart-me-up[K[K[K[K[K[K[K[K[K[K[K[K[K0/[K[K[K[K[K[K/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/[1P labs/lab0/[1P labs/lab0/[1Plabs/lab0/[1P labs/lab0/[1P labs/lab0/[1P labs/lab0/[1Plabs/lab0/[1P labs/lab0/[1P labs/lab0/[1P labs/lab0/l labs/lab0/s labs/lab0/
+[?2004lstart-me-up  start-me-up.html  start-me-up.pdf	start-me-up.umt
+[?2004htman1@remote06:~/cs471/projects/cs471$ ls labs/lab0/[3Pgit log -5ls labs/lab0/[Kgit log -4 labs/[K[K[K[K[K[K[K[K[K -3 labs/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up
+start-me-up/      start-me-up.html  start-me-up.pdf   start-me-up.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up
+start-me-up/      start-me-up.html  start-me-up.pdf   start-me-up.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up.umt 
+[?2004l[?1h=[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ ~git log -3 labs/lab0/start-me-up.umt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/start-me-up
+start-me-up/      start-me-up.html  start-me-up.pdf   start-me-up.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up
+start-me-up/      start-me-up.html  start-me-up.pdf   start-me-up.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up/hl-fine_blue.css 
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up/hl-fine_blue.css 
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/lab0/start-me-up/hl-fine_blue.css [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K0/start-me-up[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/index.[K[K[K[K[K[K[K[K/[Ks/working/working
+working/      working.html  working.pdf   working.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/working
+working/      working.html  working.pdf   working.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/working[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kclear
+[?2004l[H[2J[3J[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ ps
+[?2004l    PID TTY          TIME CMD
+1865673 pts/1    00:00:00 bash
+1872319 pts/1    00:00:00 ps
+[?2004htman1@remote06:~/cs471/projects/cs471$ git diff -r v[K[K[Kr XXXXX labs/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git diff -r XXXXX labs/lab0/start-me-up
+start-me-up/      start-me-up.html  start-me-up.pdf   start-me-up.umt   
+tman1@remote06:~/cs471/projects/cs471$ git diff -r XXXXX labs/lab0/start-me-up.umt 
+[?2004lfatal: ambiguous argument 'XXXXX': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+[?2004htman1@remote06:~/cs471/projects/cs471$ git diff -r XXXXX labs/lab0/start-me-up.umt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Klscleargit log -3 labs/lab0/start-me-up.umt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/index.umt 
+[?2004l[?1h=[33mcommit 5bc10b7c375186844874aaaed07f0adbcfde92b2[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 01:39:44 2022 -0500[m
+[m
+    added initial course material[m
+[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ git log -3 labs/index.umt [18@diff -r XXXXX labs/lab0/start-me-up[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Kgit diff -r XXXXX labs/lab0/start-me-up.umt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kindex.umt [1P[1P[1P[1P[1P[1@5[1@b[1@c[1@1[1@0
+[?2004l[?1h=[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ git diff -r 5bc10 labs/index.umt [7Plog -3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/working
+working/      working.html  working.pdf   working.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/workingum[K[K.
+working.html  working.pdf   working.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/working.
+working.html  working.pdf   working.umt   
+tman1@remote06:~/cs471/projects/cs471$ git log -3 labs/working/working.umt 
+[?2004l[?1h=[33mcommit 5bc10b7c375186844874aaaed07f0adbcfde92b2[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Jan 26 01:39:44 2022 -0500[m
+[m
+    added initial course material[m
+[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ ~~git log -3 labs/working/working.umt [3Pdiff -r 5bc10 labs/index[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K
+index.html   index.umt    lab0/        start-me-up/ working/     
+tman1@remote06:~/cs471/projects/cs471$ git diff -r 5bc10 labs/working/working.umt 
+[?2004l[?1h=[K[?1l>[?2004htman1@remote06:~/cs471/projects/cs471$ cat ~/.p
+.pki/            .practice.c.swp  .profile         
+tman1@remote06:~/cs471/projects/cs471$ cat ~/.p
+.pki/            .practice.c.swp  .profile         
+tman1@remote06:~/cs471/projects/cs471$ cat ~/.po[Kr
+.practice.c.swp  .profile         
+tman1@remote06:~/cs471/projects/cs471$ cat ~/.profile 
+[?2004lsource "$HOME/.cargo/env"
+[?2004htman1@remote06:~/cs471/projects/cs471$ vim ~/[K/.proj[Kfile 
+[?2004l[?1000h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"~/.profile" 1L, 26B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[38;5;130msource[m [38;5;130m"[m[35m$HOME[m[31m/.cargo/env[m[38;5;130m"[m
+[94m~                                                                                                       [3;1H~                                                                                                       [4;1H~                                                                                                       [5;1H~                                                                                                       [6;1H~                                                                                                       [7;1H~                                                                                                       [8;1H~                                                                                                       [9;1H~                                                                                                       [10;1H~                                                                                                       [11;1H~                                                                                                       [12;1H~                                                                                                       [13;1H~                                                                                                       [14;1H~                                                                                                       [15;1H~                                                                                                       [16;1H~                                                                                                       [17;1H~                                                                                                       [18;1H~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [29;1H~                                                                                                       [30;1H~                                                                                                       [31;1H~                                                                                                       [32;1H~                                                                                                       [33;1H~                                                                                                       [34;1H~                                                                                                       [35;1H~                                                                                                       [36;1H~                                                                                                       [37;1H~                                                                                                       [38;1H~                                                                                                       [39;1H~                                                                                                       [40;1H~                                                                                                       [41;1H~                                                                                                       [42;1H~                                                                                                       [43;1H~                                                                                                       [44;1H~                                                                                                       [45;1H~                                                                                                       [46;1H~                                                                                                       [47;1H~                                                                                                       [48;1H~                                                                                                       [m[49;87H1,1[11CAll[1;1H[?25h[?25l[49;77Hi[1;1H[49;77H [1;1H[49;1H[1m-- INSERT --[m[49;14H[K[49;87H1,1[11CAll[1;1H[?25h[?25l[49;89H2[1;2H[?25h[?25l[49;89H3[1;3H[?25h[?25l[49;89H4[1;4H[?25h[?25l[49;89H5[1;5H[?25h[?25l[49;89H6[1;6H[?25h[?25l[49;89H7[1;7H[?25h[?25l[49;89H8[1;8H[?25h[?25l[49;89H9[1;9H[?25h[?25l[49;89H10[1;10H[?25h[?25l[49;90H1[1;11H[?25h[?25l[49;90H2[1;12H[?25h[?25l[49;90H3[1;13H[?25h[?25l[49;90H4[1;14H[?25h[?25l[49;90H5[1;15H[?25h[?25l[49;90H6[1;16H[?25h[?25l[49;90H7[1;17H[?25h[?25l[49;90H8[1;18H[?25h[?25l[49;90H9[1;19H[?25h[?25l[49;89H20[1;20H[?25h[?25l[49;90H1[1;21H[?25h[?25l[49;90H2[1;22H[?25h[?25l[49;90H3[1;23H[?25h[?25l[49;90H4[1;24H[?25h[?25l[49;90H5[1;25H[?25h[?25l[49;90H6[1;26H[?25h[?25l[2;1H[K[49;87H2,1 [2;1H[?25h[49;1H[K[2;1H[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;77H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[49;77H [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;77H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hp[2;1H[49;77H [3;1H[31m1[m[3;2H[K[49;87H3,1  [3;1H[?25h[?25l[49;77H=[3;1H[?25h[?25l[49;78H~@k[3;1H[49;77H    [2;1H[49;87H2,0-1[2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [1;25H[49;87H1,25 [1;25H[?25h[?25l[49;77H~@k[1;25H[49;77H   [2;1H[49;87H2,0-1[2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [3;1H[49;87H3,1  [3;1H[?25h[?25l[49;77H~@k[3;1H[49;77H   [3;1H[?25h[?25l[49;77Hd[3;1H[?25h[?25l[49;78Hd[3;1H[49;77H  [2;1H
+[94m~                                                                                                       [m[49;87H2,0-1[2;1H[?25h[?25l[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;77H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[49;77Hf[2;1H[?25h[?25l[49;78Hp[2;1H[49;77H1 [2;1H[?25h[?25l[49;77Hq[2;1H[?25h[?25l[49;78H^[[2;1H[49;78H  [2;1H[49;78H^[[2;1H[49;77H1  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^P[2;1H[49;77H  [1;25H[49;87H1,25 [1;25H[?25h[?25l[49;77H~@k[1;25H[49;77H   [2;1H[49;87H2,0-1[2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [2;1H[?25h[?25l[49;77H^P[2;1H[49;77H  [1;25H[49;87H1,25 [1;25H[?25h[?25l[49;77H~@k[1;25H[49;77H   [2;1H[49;87H2,0-1[2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H   [2;1H[?25h[?25l[49;77H^V[2;1H[49;77H1x1[2;1H[49;1H[1m-- VISUAL BLOCK --[m[49;77H[K[49;77H1x1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[ [2;1H[49;77H1x1[2;1H[49;80H^[[2;1H[49;77H     [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77Hi[2;1H[49;77H [2;1H[49;1H[1m-- INSERT --[m[49;87H[K[49;87H2,1[11CAll[2;1H[?25h[34m^[?25l[m[49;77H^V[2;1H[?25h[?25l[49;79H^V[2;1H [49;77H    [2;1H[34m^V[m[49;89H2-3[2;3H[?25h[34m^[?25l[m[49;77H^V[2;3H[?25h[?25l[49;79H^V[2;3H [49;77H    [2;3H[34m^V[m[49;89H3-5[2;5H[?25h[?25l[2;3H[K[49;89H2-3[2;3H[?25h[?25l[2;1H[K[49;89H1  [2;1H[?25h[?25l[94m~                                                                                                       [m[49;87H1,26[1;26H[?25h[?25l[2;1H[K[49;87H2,1 [2;1H[?25h[49;1H[K[2;1H[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H:[2;1H[49;77H[K[49;1H:[?25hset paste[?25l[2;1H[?25h[?25l[49;94H^M[2;1H[49;94H  [2;1H[?25h[?25l[49;94Hi[2;1H[49;94H [2;1H[49;1H[1m-- INSERT (paste) --[2;1H[?25h[m[34m^[?25l[m[49;94H^V[2;1H[?25h [?25l[49;94H  [2;1H[34m^[[m[38;5;130m[[mM J*[?25h[?25l[?25h[?25l[2;7H[K[2;7H[?25h[?25l[2;6H[K[2;6H[?25h[?25l[?25h[?25l[2;4H[K[2;4H[?25h[?25l[2;3H[K[2;3H[?25h[?25l[2;1H[K[2;1H[?25h[?25l[94m~                                                                                                       [1;26H[?25h[?25l[m[2;1H[K[2;1H[?25h[34m^[?25l[m[49;94H^V[2;1H[?25h[?25l[49;96H^?[2;1H [49;94H    [2;1H[34m^?[?25h[?25l[m[2;1H[K[2;1H[?25h[49;1H[K[2;1H[?25l[49;94H^[[2;1H[49;94H  [2;1H[?25h[?25l[49;94H1[2;1H[49;1H[1m-- VISUAL --[m[49;94H[K[49;94H1[2;1H[?25h[?25l[?25h[?25l[49;94H^[[2;1H[49;94H1 [2;1H[49;95H^[[2;1H[49;94H   [2;1H[49;1H[K[2;1H[?25h[?25l[?25h[?25l[49;94H:[2;1H[49;94H[K[49;1H:[?25hset paste[?25l[2;1H[?25h[?25l[49;94Hi[2;1H[49;94H [2;1H[49;1H[1m-- INSERT (paste) --[2;1H[?25h[?25l[m[38;5;130m<[mS-Insert[38;5;130m>[?25h[m[49;1H[K[2;10H[?25l[49;94H^[[2;10H[49;94H  [2;11H[?25h[?25l[49;94Hu[2;10H[49;1H1 change; before #6  3 seconds ago[49;94H[K[2;1H[2;1H[K[2;1H[?25h[?25l[49;94H^[[2;1H[49;94H  [2;1H[49;94H^[[2;1H[49;94H  [2;1H[?25h[?25l[?25h[?25l[49;94HZ[2;1H[?25h[?25l[49;95HZ[2;1H[?1000l[?2004l[>4;m[49;1H"~/.profile" [49;14H[K[49;14H2L, 27B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004htman1@remote06:~/cs471/projects/cs471$ vim ~/.profile 
+[?2004l[?1000h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"~/.profile" 2L, 27B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[38;5;130msource[m [38;5;130m"[m[35m$HOME[m[31m/.cargo/env[m[38;5;130m"[m[2;1H[K[3;1H[94m~                                                                                                       [4;1H~                                                                                                       [5;1H~                                                                                                       [6;1H~                                                                                                       [7;1H~                                                                                                       [8;1H~                                                                                                       [9;1H~                                                                                                       [10;1H~                                                                                                       [11;1H~                                                                                                       [12;1H~                                                                                                       [13;1H~                                                                                                       [14;1H~                                                                                                       [15;1H~                                                                                                       [16;1H~                                                                                                       [17;1H~                                                                                                       [18;1H~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [29;1H~                                                                                                       [30;1H~                                                                                                       [31;1H~                                                                                                       [32;1H~                                                                                                       [33;1H~                                                                                                       [34;1H~                                                                                                       [35;1H~                                                                                                       [36;1H~                                                                                                       [37;1H~                                                                                                       [38;1H~                                                                                                       [39;1H~                                                                                                       [40;1H~                                                                                                       [41;1H~                                                                                                       [42;1H~                                                                                                       [43;1H~                                                                                                       [44;1H~                                                                                                       [45;1H~                                                                                                       [46;1H~                                                                                                       [47;1H~                                                                                                       [48;1H~                                                                                                       [m[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hq[2;1H[?25h[?25l[49;78Hq[2;1H[49;1H[1mrecording @q[m[49;14H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77Hq[2;1H[49;1H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77HZ[2;1H[?25h[?25l[49;78HZ[2;1H[49;1H[?1000l[?2004l[>4;m[23;2t[23;1t[49;77H[K[49;1H[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004htman1@remote06:~/cs471/projects/cs471$ ges[Kdit ~./profile
+[?2004lUnable to init server: Could not connect: Connection refused
+
+(gedit:1874931): Gtk-[1;33mWARNING[0m **: [34m12:41:38.165[0m: cannot open display: 
+[?2004htman1@remote06:~/cs471/projects/cs471$ gedit ~./profile
+[?2004lUnable to init server: Could not connect: Connection refused
+
+(gedit:1875089): Gtk-[1;33mWARNING[0m **: [34m12:42:14.831[0m: cannot open display: 
+[?2004htman1@remote06:~/cs471/projects/cs471$ gedit ~./profile[Kgedit ~./profile[1Pvim ~/.profile 
+[?2004l[?1000h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"~/.profile" 2L, 27B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[38;5;130msource[m [38;5;130m"[m[35m$HOME[m[31m/.cargo/env[m[38;5;130m"[m[2;1H[K[3;1H[94m~                                                                                                       [4;1H~                                                                                                       [5;1H~                                                                                                       [6;1H~                                                                                                       [7;1H~                                                                                                       [8;1H~                                                                                                       [9;1H~                                                                                                       [10;1H~                                                                                                       [11;1H~                                                                                                       [12;1H~                                                                                                       [13;1H~                                                                                                       [14;1H~                                                                                                       [15;1H~                                                                                                       [16;1H~                                                                                                       [17;1H~                                                                                                       [18;1H~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [29;1H~                                                                                                       [30;1H~                                                                                                       [31;1H~                                                                                                       [32;1H~                                                                                                       [33;1H~                                                                                                       [34;1H~                                                                                                       [35;1H~                                                                                                       [36;1H~                                                                                                       [37;1H~                                                                                                       [38;1H~                                                                                                       [39;1H~                                                                                                       [40;1H~                                                                                                       [41;1H~                                                                                                       [42;1H~                                                                                                       [43;1H~                                                                                                       [44;1H~                                                                                                       [45;1H~                                                                                                       [46;1H~                                                                                                       [47;1H~                                                                                                       [48;1H~                                                                                                       [m[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77H~@#[2;1H[49;77H   [2;1H[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;14H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77H~@#[2;1H[49;77H1  [2;1H[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;77H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[49;11H[1mLINE --[m[49;77H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;77H^[[2;1H[49;77H  [2;1H[?25h[?25l[49;77Hi[2;1H[49;77H [2;1H[49;1H[1m-- INSERT --[m[49;87H[K[49;87H2,1[11CAll[2;1H[?25h[?25l[49;4H[1m(insert)- VISUAL --[m[49;87H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[49;77H^V[2;1H[49;20H[1mBLOCK --[m[49;77H[K[49;77H1x1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77H^[ [2;1H[49;77H1x1[2;1H[49;80H^[[2;1H[49;77H     [2;1H[49;4H[1mINSERTt --[m[49;13H[K[49;87H2,1[11CAll[2;1H[?25h[49;1H[K[2;1H[?25l[49;77H^[[2;1H[49;77H  [2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;1H[1m-- INSERT --[m[49;87H[K[49;87H2,1[11CAll[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;1HAlready at oldest change[49;87H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,1[11CAll[2;1Hgar/cs471/bin/st[49;90H7[2;17H[?25h[?25ludent.pr[49;89H25[2;25H[?25h[?25lofile[49;89H30[2;30H[?25h[49;1H[K[2;29H[?25l[49;77H^[[2;29H[49;77H  [2;30H[49;87H2,29[10CAll[2;29H[?25h[?25l[49;77Hu[2;29H[49;1H1 change; before #1  4 seconds ago[49;77H[K[2;1H[2;1H[K[49;87H2,0-1[9CAll[49;87H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,1[11CAll[49;1H[K[2;1Hgar/cs471/bin/student.profile[49;87H2,29[10CAll[2;29H[?25h[?25lE[?25h[?25l[49;1H1 change; before #3  0 seconds ago[49;87H[K[2;29He[49;87H2,29[10CAll[49;87H[K[49;87H2,29[10CAll[2;29H[?25h[?25l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,29[10CAll[2;29Hgar/cs471/bin/student.profilee[49;89H58[2;58H[?25h[?25lue[49;90H9[2;59H[?25h[49;1H[K[2;58H[?25l[49;77H^[[2;58H[49;77H  [2;59H[49;87H2,58[10CAll[2;58H[?25h[?25l[49;77Hu[2;58H[49;1H1 change; before #4  3 seconds ago[49;77H[K[2;29He[2;30H[K[49;87H2,29[10CAll[49;87H[K[49;87H2,29[10CAll[2;29H[?25h[?25l[49;77Hu[2;29H[49;19H2  4[49;77H[K[2;1H[2;1H[K[49;87H2,0-1[9CAll[49;87H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hu[2;1H[49;1HAlready at oldest change[49;25H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hu[2;1H[49;77H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hu[2;1H[49;77H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hu[2;1H[49;77H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hu[2;1H[49;77H[K[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,1[11CAll[49;1H[K[2;1Hgar/cs471/bin/student.profileu[49;87H2,30[10CAll[2;30H[?25h[?25lU[?25h[?25l[49;1H1 change; before #6  0 seconds ago[49;87H[K[2;30Hu[49;87H2,30[10CAll[49;87H[K[49;87H2,30[10CAll[2;30H[?25h[?25l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,30[10CAll[2;30Hgar/cs471/bin/stu[49;89H46[2;46H[?25h[?25ludent.pru[49;89H54[2;54H[?25h[?25lofileu[49;90H9[2;59H[?25h[?25luu[49;89H60[2;60H[?25h[49;1H[K[2;59H[?25l[49;77H^[[2;59H[49;77H  [2;60H[49;87H2,59[10CAll[2;59H[?25h[?25l[49;77Hu[2;59H[49;1H1 change; before #7  4 seconds ago[49;77H[K[2;30Hu[2;31H[K[49;87H2,30[10CAll[49;87H[K[49;87H2,30[10CAll[2;30H[?25h[?25l[49;77Hu[2;30H[49;19H5[49;77H[K[2;1H[2;1H[K[49;87H2,0-1[9CAll[49;87H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77H1[2;1H[49;1H[1m-- VISUAL --[m[49;13H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77Hi[2;1H[?25h[?25l[49;78H~@k[2;1H[49;77H1   [2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H1  [2;1H[?25h[?25l[49;77H~@k[2;1H[49;77H2  [1;26H
+[47m [m[49;87H1,26 [1;26H[?25h[?25l[49;77H^M[1;26H[49;77H1 [2;1H[2;1H[K[49;87H2,0-1[2;1H[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;1H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;1H[1m-- INSERT --[m[49;87H[K[49;87H2,1[11CAll[49;1H[K[2;1Hgar/cs471/bin/student.profileu[49;87H2,30[10CAll[2;30H[?25h[?25lU[?25h[?25l[49;1H1 change; before #9  0 seconds ago[49;87H[K[2;30Hu[49;87H2,30[10CAll[49;87H[K[49;87H2,30[10CAll[2;30H[?25h[?25l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,30[10CAll[2;30Hgar/cs471/bin/student.profileu[49;89H59[2;59H[?25h[?25luu[49;89H60[2;60H[?25h[49;1H[K[2;59H[?25l[49;77H^[[2;59H[49;77H  [2;60H[49;87H2,59[10CAll[2;59H[?25h[?25l[49;77Hu[2;59H[49;1H1 change; before #10  5 seconds ago[49;77H[K[2;30Hu[2;31H[K[49;87H2,30[10CAll[49;87H[K[49;87H2,30[10CAll[2;30H[?25h[?25l[49;77Hu[2;30H[49;19H8  6 seconds ago[49;35H[K[2;1H[2;1H[K[49;87H2,0-1[9CAll[49;87H[K[49;87H2,0-1[9CAll[2;1H[?25h[?25l[49;77Hi[2;1H[49;77H [2;1H[49;1H[1m-- INSERT --[m[49;13H[K[49;87H2,1[11CAll[2;1H[?25h[?25l[49;4H[1m(insert)- VISUAL --[m[49;87H[K[49;77H1[2;1H[49;87H2,0-1[9CAll[2;1H[?25h[?25l[?25h[?25l[49;77H^[[2;1H[49;77H1 [2;1H[49;78H^[[2;1H[49;77H   [2;1H[49;4H[1mINSERTt --[m[49;13H[K[49;87H2,1[11CAll[2;1H[?25h[?25l[38;5;130m. [m~umrigar/cs47[49;90H6[2;16H[?25h[?25l1/bin/student.pr[49;89H32[2;32H[?25h[?25lofile[49;90H7[2;37H[?25h[49;1H[K[2;36H[?25l[49;77H^[[2;36H[49;77H  [2;37H[49;87H2,36[10CAll[2;36H[?25h[?25l[49;77H~@k[2;36H[49;77H   [2;36H[?25h[?25l[49;77H~@k[2;36H[49;77H   [2;36H[?25h[?25l[49;77HZ[2;36H[?25h[?25l[49;78HZ[2;36H[?1000l[?2004l[>4;m[49;1H"~/.profile"[49;77H[K[49;14H2L, 63B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ ls ~/[K./[K[K/.bash_history 
+announce.html  bin/           .git/          index.html     misc/          slides/
+announce.umt   docs/          .gitignore     index.umt      projects/      umt.make
+assets/        exercises/     hw/            labs/          README.md      
+tman1@remote06:~/cs471/projects/cs471$ ls ~/.bash_history [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat ~/.bash_history [K[K[K[K[K[K[K[K[K[K[K[K[K[K.profile 
+[?2004lsource "$HOME/.cargo/env"
+. ~umrigar/cs471/bin/student.profile
+[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471
+[?2004htman1@remote06:~/cs471/projects$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ cd po[Krojects/
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471
+[?2004htman1@remote06:~/cs471/projects$ git clone https://github.com/Tonym4n/i471b.git
+[?2004lCloning into 'i471b'...
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)[Kremote: Counting objects:  50% (2/4)[Kremote: Counting objects:  75% (3/4)[Kremote: Counting objects: 100% (4/4)[Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:  25% (1/4)Receiving objects:  50% (2/4)Receiving objects:  75% (3/4)Receiving objects: 100% (4/4)Receiving objects: 100% (4/4), done.
+[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ git status -s
+[?2004l[31m??[m ../../.ICEauthority
+[31m??[m ../../.Xauthority
+[31m??[m ../../.bash_history
+[31m??[m ../../.cache/
+[31m??[m ../../.cargo/
+[31m??[m ../../.config/
+[31m??[m ../../.dmrc
+[31m??[m ../../.dosbox/
+[31m??[m ../../.emacs
+[31m??[m ../../.emacs.d/
+[31m??[m ../../.forward
+[31m??[m ../../.git-credentials
+[31m??[m ../../.gitconfig
+[31m??[m ../../.gnome/
+[31m??[m ../../.gnupg/
+[31m??[m ../../.gnuplot-wxt
+[31m??[m ../../.gradle/
+[31m??[m ../../.java/
+[31m??[m ../../.lesshst
+[31m??[m ../../.local/
+[31m??[m ../../.m2/
+[31m??[m ../../.mozilla/
+[31m??[m ../../.neo4j/
+[31m??[m ../../.pki/
+[31m??[m ../../.practice.c.swp
+[31m??[m ../../.profile
+[31m??[m ../../.rustup/
+[31m??[m ../../.ssh/
+[31m??[m ../../.swp
+[31m??[m ../../.vim/
+[31m??[m ../../.viminfo
+[31m??[m ../../.xfce4-session.verbose-log
+[31m??[m ../../.xfce4-session.verbose-log.last
+[31m??[m ../../.xsession-errors
+[31m??[m ../../.xsession-errors.old
+[31m??[m ../../.zshenv
+[31m??[m ../../Downloads/
+[31m??[m ../../cs240/
+[31m??[m ../../cs320/
+[31m??[m ../../cs350/
+[31m??[m ../../cs375/
+[31m??[m ../../cs428/
+[31m??[m ../../cs440/
+[31m??[m ../../cs451/
+[31m??[m ../
+[31m??[m ../../cs476/
+[31m??[m ../../hello_cargo/
+[31m??[m ../../i220b/
+[31m??[m ../../i240b/
+[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ cd i[Kcs4`
+[?2004l[?2004h> ^C[?2004l[?2004h[?2004l
+[?2004htman1@remote06:~/cs471/projects$ cd cs47`[K1/
+[?2004l[?2004htman1@remote06:~/cs471/projects/cs471$ ls
+[?2004lannounce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+[?2004htman1@remote06:~/cs471/projects/cs471$ cd ../i471b/
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md
+[?2004htman1@remote06:~/cs471/projects/i471b$ cd [K[K[Kcat README.md 
+[?2004l# i471b[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md
+[?2004htman1@remote06:~/cs471/projects/i471b$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ ls
+[?2004lcs471  projects  tmp
+[?2004htman1@remote06:~/cs471$ cd c[Kprojects/
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ cd i471b/
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md
+[?2004htman1@remote06:~/cs471/projects/i471b$ mkdir submit
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ git status -s
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ git [K[K[K[Kls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ git status -s
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ git add .
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004htman1@remote06:~/cs471/projects/i471b$ git commit -m ""s"u"b"m"i"t" "d"i"r"
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ git pull
+[?2004lAlready up to date.
+[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ git staus -[K[K[K[Ktus -s
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ [Ktman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ cd ..
+[?2004l[?2004htman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ [Ktman1@remote06:~/cs471/projects$ ls
+[?2004lcs471  i471b
+[?2004htman1@remote06:~/cs471/projects$ cd i471b/
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ ls a[K-a
+[?2004l.  ..  .git  .gitignore  README.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ git stta[K[Katus
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004htman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs
+cs240/ cs320/ cs350/ cs375/ cs427/ cs428/ cs440/ cs451/ cs471/ cs476/ 
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs4
+cs427/ cs428/ cs440/ cs451/ cs471/ cs476/ 
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs47
+cs471/ cs476/ 
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs47
+cs471/ cs476/ 
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs472[K1 ![K~/i471[K[K[K[Kcs471/
+cs471/    projects/ tmp/      
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs471 ~/cs471/projects/
+cs471/ i471b/ 
+tman1@remote06:~/cs471/projects/i471b$ ls -dl ~/cs471 ~/cs471/projects/i471b/
+[?2004ldrwxr-x--- 4 tman1 tman1 59 Jan 27 12:16 /home/tman1/cs471
+drwxr-x--- 4 tman1 tman1 83 Jan 27 12:59 /home/tman1/cs471/projects/i471b/
+[?2004htman1@remote06:~/cs471/projects/i471b$ ls -l ~/.ssh/
+authorized_keys  id_rsa           id_rsa.pub       known_hosts      
+tman1@remote06:~/cs471/projects/i471b$ ls -l ~/.ssh/ !/cs472[K[K[K[K[K[K[K~/cs471 ![K~/cs471``[K[K/projects/cs4`[K7`[K1/
+[?2004l/home/tman1/cs471:
+total 0
+lrwxrwxrwx 1 tman1 tman1 15 Jan 27 12:16 cs471 -> projects/cs471/
+drwxr-x--- 4 tman1 tman1 42 Jan 27 12:58 projects
+drwxr-x--- 3 tman1 tman1 25 Jan 27 12:08 tmp
+
+/home/tman1/cs471/projects/cs471/:
+total 28
+-rw-r----- 1 tman1 tman1 1040 Jan 27 12:14 announce.html
+-rw-r----- 1 tman1 tman1   55 Jan 27 12:14 announce.umt
+drwxr-x--- 6 tman1 tman1   76 Jan 27 12:14 assets
+drwxr-x--- 2 tman1 tman1  154 Jan 27 12:14 bin
+drwxr-x--- 2 tman1 tman1   51 Jan 27 12:14 docs
+drwxr-x--- 2 tman1 tman1   51 Jan 27 12:14 exercises
+drwxr-x--- 2 tman1 tman1   51 Jan 27 12:14 hw
+-rw-r----- 1 tman1 tman1 2386 Jan 27 12:14 index.html
+-rw-r----- 1 tman1 tman1  637 Jan 27 12:14 index.umt
+drwxr-x--- 4 tman1 tman1  106 Jan 27 12:14 labs
+drwxr-x--- 8 tman1 tman1 4096 Jan 27 12:14 misc
+drwxr-x--- 2 tman1 tman1   51 Jan 27 12:14 projects
+-rw-r----- 1 tman1 tman1   43 Jan 27 12:14 README.md
+drwxr-x--- 4 tman1 tman1  112 Jan 27 12:14 slides
+-rw-r----- 1 tman1 tman1 1201 Jan 27 12:14 umt.make
+
+/home/tman1/.ssh/:
+total 16
+-rw------- 1 tman1 tman1  743 Jan 27 12:12 authorized_keys
+-rw------- 1 tman1 tman1 3381 Sep 17 01:21 id_rsa
+-rw-r----- 1 tman1 tman1  743 Sep 17 01:21 id_rsa.pub
+-rw-r--r-- 1 tman1 tman1 1550 Jan 27 12:14 known_hosts
+[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ git checkout -b lab0
+[?2004lSwitched to a new branch 'lab0'
+[?2004htman1@remote06:~/cs471/projects/i471b$ mkdir -[K[K[K[K[K[K[Kls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ mkdir -p submit
+[?2004l[?2004htman1@remote06:~/cs471/projects/i471b$ ls
+[?2004lREADME.md  submit
+[?2004htman1@remote06:~/cs471/projects/i471b$ [?2004l
+exit
+
+Script done on 2022-01-27 13:34:15-05:00 [COMMAND_EXIT_CODE="0"]
