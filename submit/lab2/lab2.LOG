@@ -1,0 +1,381 @@
+Script started on 2022-02-10 17:15:00-05:00 [TERM="xterm-256color" TTY="/dev/pts/21" COLUMNS="104" LINES="49"]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2$ ls
+[?2004lexercises  lab2.LOG
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2$ cd exercises/
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises$ ls
+[?2004l01  02	ast  calc
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises$ cd 01`[K/
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ ls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ ./calc.mjs 
+[?2004lusage: calc.mjs INPUT_FILE
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ ./calc.mjs data.txt 
+[?2004l[ [33m0[39m, [33m3[39m ]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ ./calc.mjs expn-data.txt 
+[?2004l[ [33m-256[39m, [33m9[39m, [33m-7[39m ]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ ls
+[?2004lcalc.mjs  calc.py  data.txt  expn-data.txt
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/01$ cd ..
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises$ ls
+[?2004l01  02	ast  calc
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises$ cd 02/
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ls
+[?2004last.mjs  ast.py  data.json  data.output  data.txt  expn-data.json  expn-data.output  expn-data.txt
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ cd [K[K[K./ast.mjs 
+[?2004lusage: ast.mjs INPUT_FILE
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs data.txt 
+[?2004l[{"tag":"-","xkids":[{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]},{"tag":"INT","xkids":[],"value":3}]},{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":2}]}]},{"tag":"-","xkids":[{"tag":"INT","xkids":[],"value":3},{"tag":"INT","xkids":[],"value":4}]}]}]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs data.txt | json_pp
+[?2004l[
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "+",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 1,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               }
+            ]
+         },
+         {
+            "tag" : "INT",
+            "value" : 3,
+            "xkids" : []
+         }
+      ]
+   },
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "-",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 3,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "INT",
+                  "value" : 4,
+                  "xkids" : []
+               }
+            ]
+         }
+      ]
+   }
+]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs data.txt | json_pp[K[K[K[K[K[K[K[K[K[Kexpn-data..[Ktxt 
+[?2004l[{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"INT","xkids":[],"value":3}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"-","xkids":[{"tag":"**","xkids":[{"tag":"INT","xkids":[],"value":2},{"tag":"+","xkids":[{"tag":"INT","xkids":[],"value":1},{"tag":"INT","xkids":[],"value":2}]}]}]}]}]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs expn-data.txt | json_pp
+[?2004l[
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "**",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "**",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "INT",
+                        "value" : 3,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "tag" : "+",
+      "xkids" : [
+         {
+            "tag" : "INT",
+            "value" : 1,
+            "xkids" : []
+         },
+         {
+            "tag" : "**",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "+",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 1,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "tag" : "+",
+      "xkids" : [
+         {
+            "tag" : "INT",
+            "value" : 1,
+            "xkids" : []
+         },
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "**",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "+",
+                        "xkids" : [
+                           {
+                              "tag" : "INT",
+                              "value" : 1,
+                              "xkids" : []
+                           },
+                           {
+                              "tag" : "INT",
+                              "value" : 2,
+                              "xkids" : []
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs expn-data.txt | json_pp[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K.txt > [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdata.txt > data.output 
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ ./ast.mjs expn-data.txt > expn-data.output 
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ cat data.output | json_pp
+[?2004l[
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "+",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 1,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               }
+            ]
+         },
+         {
+            "tag" : "INT",
+            "value" : 3,
+            "xkids" : []
+         }
+      ]
+   },
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "-",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 3,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "INT",
+                  "value" : 4,
+                  "xkids" : []
+               }
+            ]
+         }
+      ]
+   }
+]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ cat expn-data.output | json_pp
+[?2004l[
+   {
+      "tag" : "-",
+      "xkids" : [
+         {
+            "tag" : "**",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "**",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "INT",
+                        "value" : 3,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "tag" : "+",
+      "xkids" : [
+         {
+            "tag" : "INT",
+            "value" : 1,
+            "xkids" : []
+         },
+         {
+            "tag" : "**",
+            "xkids" : [
+               {
+                  "tag" : "INT",
+                  "value" : 2,
+                  "xkids" : []
+               },
+               {
+                  "tag" : "+",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 1,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "tag" : "+",
+      "xkids" : [
+         {
+            "tag" : "INT",
+            "value" : 1,
+            "xkids" : []
+         },
+         {
+            "tag" : "-",
+            "xkids" : [
+               {
+                  "tag" : "**",
+                  "xkids" : [
+                     {
+                        "tag" : "INT",
+                        "value" : 2,
+                        "xkids" : []
+                     },
+                     {
+                        "tag" : "+",
+                        "xkids" : [
+                           {
+                              "tag" : "INT",
+                              "value" : 1,
+                              "xkids" : []
+                           },
+                           {
+                              "tag" : "INT",
+                              "value" : 2,
+                              "xkids" : []
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+]
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ cat[K[K[Kls
+[?2004last.mjs  ast.py  data.json  data.output  data.txt  expn-data.json  expn-data.output  expn-data.txt
+[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ diff data.output | [K[Kdata.json 
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ diff data.[K[K[K[K[Kexpn-data.output expn-data.json 
+[?2004l[?2004htman1@remote00:~/cs471/projects/i471b/submit/lab2/exercises/02$ exit
+[?2004lexit
+
+Script done on 2022-02-10 17:16:57-05:00 [COMMAND_EXIT_CODE="0"]
