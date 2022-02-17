@@ -1,0 +1,88 @@
+(display "----------EXERCISE 1----------\n")
+{
+    define (polynomial x)
+    (- (+ (- (* 3 (expt x 3)) (* 2 (expt x 2))) (* 4 x)) 1)
+}
+
+(display (polynomial 4))
+(newline)
+
+{
+    define (compound_interest P r n t)
+    (* P (expt (+ 1 (/ r n)) (* n t)))
+}
+
+(display (compound_interest 1000 .05 1 5))
+(newline)
+
+
+(display "----------EXERCISE 2----------\n")
+{define list1 '(1 2 3 4 5)}
+{define list2 '(a b c d e)}
+
+(display (cadr list2))
+(newline)
+
+(display (cdddr list2))
+(newline)
+
+(display (append (cddr list1) (cdddr list2)))
+(newline)
+
+(display "----------EXERCISE 3----------\n")
+{
+    define (rect-area width height) (* width height)
+}
+{
+    define (rect-perimeter width height) (* (+ width height) 2)
+}
+
+(display (rect-perimeter 4 5))
+(newline)
+
+{
+    define (line-length x1 y1 x2 y2) 
+    (sqrt (+ (expt (- x1 x2) 2) (expt (- y1 y2) 2)))
+}
+
+(display (line-length 7 4 10 8))
+(newline)
+
+{
+    define (line-length p1 p2) 
+    (sqrt (+ (expt (- (car p1) (car p2)) 2) (expt (- (cadr p1) (cadr p2)) 2)))
+}
+
+(display (line-length '(7 4) '(10 8)))
+(newline)
+
+(display "----------EXERCISE 4----------\n")
+{
+    define (mult args) 
+    (if (null? args)
+        1
+        (* (car args) (mult (cdr args))))
+}
+
+;(display (mult '(2 4 8 16)))
+;(newline)
+
+{
+    define (sum args)
+    (if (null? args)
+        0
+        (+ (car args) (sum (cdr args))))
+}
+
+(display (sum '(1 2 3 4 5)))
+(newline)
+
+{
+    define (zip l1 l2)
+    (if (null? l1)
+        '()
+        (append (list (cons (car l1) (car l2))) (zip (cdr l1) (cdr l2))))
+}
+
+(display (zip '(1 2 3 4) '(a b c d)))
+(newline)
