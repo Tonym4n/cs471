@@ -8,10 +8,10 @@ From the prj1-sol directory, type:
 	./make.sh
 
 To run the code with run-all-test.sh:
-	../extras/run-all-tests.sh
+	./run-all-tests.sh
 
 To run the code with do-test.sh:
-	../extras/do-test.sh scan|parse DEFS_FILE
+	./do-test.sh scan|parse DEFS_FILE
 
 To run the code with a specific .defs file:
 	./scan.sh|./parse.sh DEFS_FILE

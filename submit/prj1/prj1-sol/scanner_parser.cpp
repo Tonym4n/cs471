@@ -266,6 +266,11 @@ vector<Ast> parse(string s)
 	vector<Ast> Asts;
 	if(!check("EOF"))
 		Asts = source();
+	if(!check("EOF"))		//if there are more tokens, it violates the EBNF grammar
+	{
+		cerr << "Could not consume remaining tokens" << endl;
+		exit(EXIT_FAILURE);
+	}
 	return Asts;
 }
 
