@@ -1,0 +1,13 @@
+-*- mode: compilation; default-directory: "~/projects/cs471/projects/prj1/" -*-
+Compilation started at Sat Feb  5 16:08:13
+
+make -f ../../umt.make 
+ssh zdu.binghamton.edu bin/zdu-umt2pdf cs471 ../.. /home/umrigar/projects/cs471/projects/prj1 \
+		           article-template.tex prj1.umt prj1.pdf \
+			   -D umt/code/lang=c
+scp: /home/umrigar/projects/cs471/projects/prj1/figs: No such file or directory
+scp: /home/umrigar/projects/cs471/projects/prj1/code: No such file or directory
+umt -D HOME=../.. -D umt/code/lang=c \
+	  ../../assets/umt/article-template.html prj1.umt prj1.html
+
+Compilation finished at Sat Feb  5 16:08:19

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../assets/styles/article.css" rel="stylesheet" type="text/css" /> 
+    <title>CS 471: Project 1</title>
+    <link href="prj1/hl-fine_blue.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav>
+      <ul>
+	<li><a href="../../index.html" class="material-icons">house</a></li>
+	<li><a href="../../docs/index.html">Docs</a></li>
+	<li><a href="../../exercises/index.html">Exercises</a></li>
+	<li><a href="../../hw/index.html">Homework</a></li>
+	<li><a href="../../labs/index.html">Labs</a></li>
+	<li><a href="../../misc/index.html">Misc</a></li>
+	<li><a href="../../projects/index.html">Projects</a></li>
+	<li><a href="../../slides/index.html">Slides</a></li>
+	<li><a id="loginAction"></a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <section data-coord="prj1.umt:1:0"><h1 data-coord="prj1.umt:1:0">Project 1</h1><p data-coord="prj1.umt:3:0"><strong data-coord="prj1.umt:3:0">Due</strong>: Feb 18, before midnight.
+</p><p data-coord="prj1.umt:5:0"><strong data-coord="prj1.umt:5:0">Important Reminder</strong>: As per the course <em data-coord="prj1.umt:5:110"><a href="../../misc/academic-honesty-statement/academic-honesty-policy.html" data-coord="prj1.umt:5:110">Academic Honesty Statement</a></em>,
+cheating of any kind will minimally result in your letter grade
+for the entire course being reduced by one level.
+</p><p data-coord="prj1.umt:9:0">This document first provides the aims of this project.  It then lists
+the requirements as explicitly as possible.  It then hints at how
+these requirements can be met.  Finally, it describes how it can be
+submitted.
+</p><section data-coord="prj1.umt:14:0"><h2 data-coord="prj1.umt:14:0">Aims</h2><p data-coord="prj1.umt:17:0">The aims of this project are as follows:
+</p><ul data-coord="prj1.umt:19:0"><li data-coord="prj1.umt:19:0"><p data-coord="prj1.umt:19:4">To encourage you to use regular expressions to implement a trivial
+scanner.
+</p></li><li data-coord="prj1.umt:22:0"><p data-coord="prj1.umt:22:4">To make you implement a recursive-descent parser for a
+small language.
+</p></li><li data-coord="prj1.umt:25:0"><p data-coord="prj1.umt:25:4">To use <a href="https://www.json.org/json-en.html" data-coord="prj1.umt:25:48">JSON</a> to represent
+token lists and abstract syntax trees.
+</p></li></ul></section><section data-coord="prj1.umt:28:0"><h2 data-coord="prj1.umt:28:0">Requirements</h2><p data-coord="prj1.umt:32:0">Use any programming language available on <samp data-coord="prj1.umt:32:42">remote.cs</samp> to implement a
+recognizer for a ifdef language with directives similar to the
+conditional compliation directives in the C-preprocessor.
+Specifically, update your github repository with a directory
+<samp data-coord="prj1.umt:32:251">submit/prj1-sol</samp> such that:
+</p><ol data-coord="prj1.umt:38:0"><li data-coord="prj1.umt:38:0"><p data-coord="prj1.umt:38:4">Typing <samp data-coord="prj1.umt:38:11">./make.sh</samp> within that directory will build any artifacts
+needed to run your program.
+</p></li><li data-coord="prj1.umt:41:0"><p data-coord="prj1.umt:41:4">Typing <samp data-coord="prj1.umt:41:11">./scan.sh</samp> within that directory will read text from
+standard input and output on standard output a JSON list of tokens
+for the ifdef language followed by a newline.  The tokens of the
+ifdef language are defined below.  
+</p></li><li data-coord="prj1.umt:46:0"><p data-coord="prj1.umt:46:4">Typing <samp data-coord="prj1.umt:46:11">./parse.sh</samp> within that directory will read text from
+standard input and output on standard output a JSON list of AST's
+as defined below.
+</p></li></ol><p data-coord="prj1.umt:50:0">If there are errors in the content, the program should exit with a
+non-zero status after detecting the first syntax error.  It should
+output a error message on standard error.
+</p><section data-coord="prj1.umt:55:0"><h3 data-coord="prj1.umt:55:0">Lexical Requirements</h3><p data-coord="prj1.umt:58:0">The lexical requirements for the ifdef language is defined by the
+following rules:
+</p><ul data-coord="prj1.umt:62:0"><li data-coord="prj1.umt:62:0"><p data-coord="prj1.umt:62:4">A <strong data-coord="prj1.umt:62:6">line</strong> is a maximal sequence of characters not containing
+a newline <samp data-coord="prj1.umt:62:78">'\n'</samp> character.
+</p></li><li data-coord="prj1.umt:65:0"><p data-coord="prj1.umt:65:4"><strong data-coord="prj1.umt:65:4">Linear whitespace</strong> is a maximal sequence of characters consisting
+of space <samp data-coord="prj1.umt:65:84">' '</samp> or tabs <samp data-coord="prj1.umt:65:98">'\t'</samp>.
+</p></li><li data-coord="prj1.umt:68:0"><p data-coord="prj1.umt:68:4"><samp data-coord="prj1.umt:68:4">IFDEF</samp>, <samp data-coord="prj1.umt:68:13">IFNDEF</samp>, <samp data-coord="prj1.umt:68:23">ELIF</samp>, <samp data-coord="prj1.umt:68:31">ELSE</samp> and <samp data-coord="prj1.umt:68:42">ENDIF</samp> tokens are <samp data-coord="prj1.umt:68:61">#ifdef</samp>,
+<samp data-coord="prj1.umt:68:75">#ifndef</samp>, <samp data-coord="prj1.umt:68:86">#elif</samp>, <samp data-coord="prj1.umt:68:95">#else</samp>, <samp data-coord="prj1.umt:68:104">#endif</samp> occurring at the start of a
+line optionally preceeded by linear whitespace.  A line starting
+with such a token is referred to as a <strong data-coord="prj1.umt:68:252">directive line</strong>.
+</p></li><li data-coord="prj1.umt:73:0"><p data-coord="prj1.umt:73:4">A <samp data-coord="prj1.umt:73:6">SYM</samp> is a maximal sequence of characters starting with an
+alphabetic character or underscore and continuing on with
+zero-or-more alphanumerics or underscores.  They are only
+recognized after linear whitespace following <samp data-coord="prj1.umt:73:238">IFDEF</samp>, <samp data-coord="prj1.umt:73:247">IFNDEF</samp> and
+<samp data-coord="prj1.umt:73:264">ELIF</samp> tokens.
+</p></li><li data-coord="prj1.umt:79:0"><p data-coord="prj1.umt:79:4">The rest of a directive line following the starting token and
+possible <samp data-coord="prj1.umt:79:79">SYM</samp> token is ignored.
+</p></li><li data-coord="prj1.umt:82:0"><p data-coord="prj1.umt:82:4"><samp data-coord="prj1.umt:82:4">TEXT</samp> tokens consists of a maximal sequence of lines none of
+which are directive lines.
+</p></li></ul><p data-coord="prj1.umt:85:0">The <samp data-coord="prj1.umt:85:4">scan.sh</samp> script you are required to implement should output a
+JSON list of tokens on standard output followed by a newline.  Each
+token should be output as a pair: a 2-element JSON list whose first
+element is the token kind as defined above and second element is the
+token <em data-coord="prj1.umt:85:278">lexeme</em>, i.e. the text which the token matched.
+</p><p data-coord="prj1.umt:91:0">For example, the following input from <a href="extras/tests/scan0.defs" data-coord="prj1.umt:91:65">scan0.defs:</a>
+</p><pre data-coord="prj1.umt:95:0">  Some text
+  more text
+    #else stuff ignored
+    #ifndef _123 ignored
+    # ifdef text line
+    #elif 2222 note 2222 not a sym
+  more text
+  and more
+</pre><p data-coord="prj1.umt:105:0">should result in the output:
+</p><pre><span class="hl kwb">[</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;  Some text</span><span class="hl esc">\n</span>  <span class="hl str">more text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;ELSE&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;#else&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;IFNDEF&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;#ifndef&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;SYM&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;_123&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;    # ifdef text line</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;ELIF&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;#elif&quot;</span>
+   <span class="hl kwb">]</span><span class="hl opt">,</span>
+   <span class="hl kwb">[</span>
+      <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;  more text</span><span class="hl esc">\n</span>  <span class="hl str">and more</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+   <span class="hl kwb">]</span>
+<span class="hl kwb">]</span></pre><p data-coord="prj1.umt:141:0">Note that the above is a pretty-printed version of the output; the actual
+output should not contain any non-significant whitespace other than the
+terminating newline.
+</p></section><section data-coord="prj1.umt:145:0"><h3 data-coord="prj1.umt:145:0">Syntactic Requirements</h3><p data-coord="prj1.umt:148:0">The <samp data-coord="prj1.umt:148:4">parse.sh</samp> script should extract the structure defined by the following
+EBNF grammar from its standard input:
+</p><pre data-coord="prj1.umt:152:0">source
+  : (TEXT | ifdef)*         
+  ;
+ifdef
+  : (IFDEF | IFNDEF) SYM
+    source
+    (ELIF SYM source)*
+    (ELSE source)?
+    ENDIF
+  ;
+</pre><p data-coord="prj1.umt:164:0">The grammar uses the usual EBNF notation covered in class.
+</p><p data-coord="prj1.umt:166:0">The output of <samp data-coord="prj1.umt:166:14">parse.sh</samp> should be the JSON representation of an AST defined
+as follows:
+</p><ul data-coord="prj1.umt:169:0"><li data-coord="prj1.umt:169:0"><p data-coord="prj1.umt:169:4">A <samp data-coord="prj1.umt:169:6">source</samp> non-terminal should result in a JSON list of ASTs corresponding
+to its <samp data-coord="prj1.umt:169:90">TEXT</samp> or <samp data-coord="prj1.umt:169:100">ifdef</samp> consituents.
+</p></li><li data-coord="prj1.umt:172:0"><p data-coord="prj1.umt:172:4">The JSON corresponding to a <samp data-coord="prj1.umt:172:32">TEXT</samp> token should be a JSON object
+<samp data-coord="prj1.umt:172:73">{ "tag": "TEXT", "text":</samp> <em data-coord="prj1.umt:172:100">TXT</em> <samp data-coord="prj1.umt:172:106">}</samp> where <em data-coord="prj1.umt:172:116">TXT</em> is the lexeme
+for the <samp data-coord="prj1.umt:172:148">TEXT</samp> token.
+</p></li><li data-coord="prj1.umt:176:0"><p data-coord="prj1.umt:176:4">The JSON corresponding to a <samp data-coord="prj1.umt:176:32">ifdef</samp> non-terminal should consist of
+a JSON object <samp data-coord="prj1.umt:176:89">{ "tag":</samp> <em data-coord="prj1.umt:176:100">TAG</em><samp data-coord="prj1.umt:176:105">, sym:</samp> <em data-coord="prj1.umt:176:114">SYM</em><samp data-coord="prj1.umt:176:119">, xkids:</samp> <em data-coord="prj1.umt:176:130">KIDS</em> <samp data-coord="prj1.umt:176:137">}</samp>
+where <em data-coord="prj1.umt:176:151">TAG</em> is either <samp data-coord="prj1.umt:176:167">IFDEF</samp> or <samp data-coord="prj1.umt:176:178">IFNDEF</samp> depending on the first
+token, <em data-coord="prj1.umt:176:221">SYM</em> is the lexeme of the <samp data-coord="prj1.umt:176:248">SYM</samp> token, and <em data-coord="prj1.umt:176:265">KIDS</em> is a
+JSON list which is a concatenation of:
+</p><ol data-coord="prj1.umt:182:0"><li data-coord="prj1.umt:182:0"><p data-coord="prj1.umt:182:8">The list of AST's corresponding to the first <samp data-coord="prj1.umt:182:53">source</samp>
+non-terminal on the RHS of the rule for <samp data-coord="prj1.umt:182:110">ifdef</samp>.
+</p></li><li data-coord="prj1.umt:185:0"><p data-coord="prj1.umt:185:8">A list of the ASTs for the <samp data-coord="prj1.umt:185:35">ELIF</samp> sections where the AST
+for a <samp data-coord="prj1.umt:185:79">ELIF</samp> section is a JSON object of the form
+<samp data-coord="prj1.umt:185:124">{ "tag": "ELIF", sym:</samp> <em data-coord="prj1.umt:185:148">SYM</em><samp data-coord="prj1.umt:185:153">, xkids:</samp> <em data-coord="prj1.umt:185:164">ELIF_KIDS</em> <samp data-coord="prj1.umt:185:176">}</samp>
+where <em data-coord="prj1.umt:185:187">SYM</em> is the lexeme of the <samp data-coord="prj1.umt:185:214">SYM</samp> token, and <em data-coord="prj1.umt:185:231">ELIF_KIDS</em>
+is the list of AST's for the second <samp data-coord="prj1.umt:185:280">source</samp> non-terminal
+on the RHS of the rule for <samp data-coord="prj1.umt:185:330">ifdef</samp>.
+</p></li><li data-coord="prj1.umt:192:0"><p data-coord="prj1.umt:192:8">If <samp data-coord="prj1.umt:192:11">ELSE</samp> is present, then a single element list containing
+the AST for the <samp data-coord="prj1.umt:192:92">ELSE</samp> section which consists of <samp data-coord="prj1.umt:192:125">{ "tag":
+        "ELSE", xkids:</samp> <em data-coord="prj1.umt:192:159">ELSE_KIDS</em> <samp data-coord="prj1.umt:192:171">}</samp> where <em data-coord="prj1.umt:192:181">ELSE_KIDS</em> is the list
+of AST's for the third <samp data-coord="prj1.umt:192:236">source</samp> non-terminal on the RHS of the
+rule for <samp data-coord="prj1.umt:192:293">ifdef</samp>.
+</p></li></ol></li></ul><p data-coord="prj1.umt:198:0">For example, the input:
+</p><pre data-coord="prj1.umt:201:0">Some text
+  more text
+#ifdef sym123
+  # ifdef text
+  #elif _123
+     elif text 1
+  #ifndef some_sym
+  # ifndef text
+  #endif
+  #elif _345
+     elif text 2
+  #else ignored text
+    # else text
+  #endif
+  Some more text
+</pre><p data-coord="prj1.umt:218:0">should result in the output:
+</p><pre><span class="hl kwb">[</span>
+   <span class="hl kwa">{</span>
+      <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;Some text</span><span class="hl esc">\n</span>  <span class="hl str">more text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+   <span class="hl kwa">}</span><span class="hl opt">,</span>
+   <span class="hl kwa">{</span>
+      <span class="hl str">&quot;sym&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;sym123&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;IFDEF&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;xkids&quot;</span> <span class="hl opt">:</span> <span class="hl kwb">[</span>
+         <span class="hl kwa">{</span>
+            <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;  # ifdef text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+         <span class="hl kwa">}</span><span class="hl opt">,</span>
+         <span class="hl kwa">{</span>
+            <span class="hl str">&quot;sym&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;_123&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;ELIF&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;xkids&quot;</span> <span class="hl opt">:</span> <span class="hl kwb">[</span>
+               <span class="hl kwa">{</span>
+                  <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+                  <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;     elif text 1</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+               <span class="hl kwa">}</span><span class="hl opt">,</span>
+               <span class="hl kwa">{</span>
+                  <span class="hl str">&quot;sym&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;some_sym&quot;</span><span class="hl opt">,</span>
+                  <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;IFNDEF&quot;</span><span class="hl opt">,</span>
+                  <span class="hl str">&quot;xkids&quot;</span> <span class="hl opt">:</span> <span class="hl kwb">[</span>
+                     <span class="hl kwa">{</span>
+                        <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+                        <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;  # ifndef text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+                     <span class="hl kwa">}</span>
+                  <span class="hl kwb">]</span>
+               <span class="hl kwa">}</span>
+            <span class="hl kwb">]</span>
+         <span class="hl kwa">}</span><span class="hl opt">,</span>
+         <span class="hl kwa">{</span>
+            <span class="hl str">&quot;sym&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;_345&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;ELIF&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;xkids&quot;</span> <span class="hl opt">:</span> <span class="hl kwb">[</span>
+               <span class="hl kwa">{</span>
+                  <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+                  <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;     elif text 2</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+               <span class="hl kwa">}</span>
+            <span class="hl kwb">]</span>
+         <span class="hl kwa">}</span><span class="hl opt">,</span>
+         <span class="hl kwa">{</span>
+            <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;ELSE&quot;</span><span class="hl opt">,</span>
+            <span class="hl str">&quot;xkids&quot;</span> <span class="hl opt">:</span> <span class="hl kwb">[</span>
+               <span class="hl kwa">{</span>
+                  <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+                  <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;    # else text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+               <span class="hl kwa">}</span>
+            <span class="hl kwb">]</span>
+         <span class="hl kwa">}</span>
+      <span class="hl kwb">]</span>
+   <span class="hl kwa">}</span><span class="hl opt">,</span>
+   <span class="hl kwa">{</span>
+      <span class="hl str">&quot;tag&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;TEXT&quot;</span><span class="hl opt">,</span>
+      <span class="hl str">&quot;text&quot;</span> <span class="hl opt">:</span> <span class="hl str">&quot;  Some more text</span><span class="hl esc">\n</span><span class="hl str">&quot;</span>
+   <span class="hl kwa">}</span>
+<span class="hl kwb">]</span>
+</pre><p data-coord="prj1.umt:284:0">Note that the above is a pretty-printed version of the output; the actual
+output should not contain any non-significant whitespace other than the
+terminating newline.  Note also that the order of the fields in a JSON
+object is undefined; hence output where the fields are in a different
+order is also acceptable.
+</p><p data-coord="prj1.umt:290:0">Further examples are available in the <a href="extras/tests" data-coord="prj1.umt:290:54">extras/tests</a>
+directory.
+</p></section></section><section data-coord="prj1.umt:293:0"><h2 data-coord="prj1.umt:293:0">Provided Files</h2><p data-coord="prj1.umt:296:0">The <a href="./prj1-sol" data-coord="prj1.umt:296:18">prj1-sol</a> directory contains starter
+shell scripts for the three scripts your submission
+is required to contain as well as a template
+README.
+</p><p data-coord="prj1.umt:301:0">The <a href="./extras" data-coord="prj1.umt:301:16">extras</a> directory contains a <samp data-coord="prj1.umt:301:60"><a href="extras/tests" data-coord="prj1.umt:301:60">tests</a></samp>
+directory and the following testing scripts:
+</p><dl data-coord="prj1.umt:304:0"><dt data-coord="prj1.umt:304:2"> <a href="extras/do-test.sh" data-coord="prj1.umt:304:22">do-test.sh</a> </dt><dd data-coord="prj1.umt:305:0"><p data-coord="prj1.umt:305:4">This must be invoked from the directory containing your <samp data-coord="prj1.umt:305:60">scan.sh</samp>
+and <samp data-coord="prj1.umt:305:78">parse.sh</samp> scripts with two arguments the first of which must
+be either <samp data-coord="prj1.umt:305:154">scan</samp> or <samp data-coord="prj1.umt:305:164">parse</samp> and the second must specify the name
+of a <samp data-coord="prj1.umt:305:218">*.defs</samp> text file containing ifdef content.
+</p><p data-coord="prj1.umt:310:4">The expected result for the test must be in a file having name
+formed from the input file by replacing the <samp data-coord="prj1.umt:310:115">.defs</samp> with either
+<samp data-coord="prj1.umt:310:139">.scan.json</samp> or <samp data-coord="prj1.umt:310:155">.parse.json</samp>.
+</p><p data-coord="prj1.umt:314:4">The script will run the appropriate <samp data-coord="prj1.umt:314:40">scan.sh</samp> or <samp data-coord="prj1.umt:314:53">parse.sh</samp> script
+on the input file and compare the standard output with the
+expected output.  It will print out errors if the comparison fails
+or if the <samp data-coord="prj1.umt:314:219">scan.sh</samp> or <samp data-coord="prj1.umt:314:232">parse.sh</samp> script returns a non-zero exit
+status.  It will succeed silently if the test succeeeds.
+</p></dd><dt data-coord="prj1.umt:320:2"> <a href="extras/run-all-tests.sh" data-coord="prj1.umt:320:28">run-all-tests.sh</a> </dt><dd data-coord="prj1.umt:321:0"><p data-coord="prj1.umt:321:4">If run without any arguments, it will run <samp data-coord="prj1.umt:321:46">do-test.sh</samp> on all the
+tests in the <a href="extras/tests" data-coord="prj1.umt:321:103">tests</a> directory, printing a message
+for each test.
+</p><p data-coord="prj1.umt:325:4">If it is provided any argument at all, it will only run the
+scan tests.  This is convenient for testing the lexer thoroughly
+before working on the parser.
+</p></dd></dl></section><section data-coord="prj1.umt:330:0"><h2 data-coord="prj1.umt:330:0">Git</h2><ul data-coord="prj1.umt:334:0"><li data-coord="prj1.umt:334:0"><p data-coord="prj1.umt:334:4">Always ensure that your local copy of the <samp data-coord="prj1.umt:334:46">cs471</samp> course
+repository is up-to-date (this manual step is particularly
+necessary if you are connecting to an existing x2go session):
+</p><pre>        $ <span class="hl kwb">cd</span> ~<span class="hl opt">/</span>cs471
+        $ git pull</pre></li><li data-coord="prj1.umt:344:0"><p data-coord="prj1.umt:344:4">You will likely be submitting multiple labs while working on this
+project.  To avoid having updates to the labs and project stepping
+over each other, it is imperative that you create a separate
+branch for this project and for each lab.
+</p><p data-coord="prj1.umt:349:4">Create a branch for this project in your working copy of your
+github respository:
+</p><pre>        $ <span class="hl kwb">cd</span> ~<span class="hl opt">/</span>i471?           <span class="hl slc">#go to clone of github repo</span>
+        $ git checkout main    <span class="hl slc">#ensure in main branch</span>
+        $ git pull             <span class="hl slc">#ensure main up-to-date</span>
+        $ git checkout <span class="hl kwb">-b</span> prj1 <span class="hl slc">#create a new branch for this project</span></pre><p data-coord="prj1.umt:360:4">Whenever you restart work on this project, it is <strong data-coord="prj1.umt:360:53">imperative</strong> to
+ensure that you are on the correct branch.  You can use commands
+like the following to ensure that you are in your <samp data-coord="prj1.umt:360:192">prj1</samp> branch:
+</p><pre>    $ <span class="hl kwb">cd</span> ~<span class="hl opt">/</span>i471?
+    $ git branch <span class="hl kwb">-l</span>            <span class="hl slc">#list all branches;</span>
+                               <span class="hl slc">#current branch marked by a *.</span>
+    $ git checkout prj1        <span class="hl slc">#checkout project branch</span>
+    $ <span class="hl kwb">cd</span> submit<span class="hl opt">/</span>prj1-sol       <span class="hl slc">#go to project dir</span></pre></li></ul></section><section data-coord="prj1.umt:373:0"><h2 data-coord="prj1.umt:373:0">Standard Input, Standard Ouput, Standard Error</h2><p data-coord="prj1.umt:376:0">When a program starts up under any current OS, three I/O streams
+are always initially open:
+</p><dl data-coord="prj1.umt:379:0"><dt data-coord="prj1.umt:379:2"> <strong data-coord="prj1.umt:379:1">Standard Input</strong> </dt><dd data-coord="prj1.umt:380:0"><p data-coord="prj1.umt:380:4">An input stream, initially set up to read from the console.
+This often corresponds to file descriptor 0.
+</p></dd><dt data-coord="prj1.umt:383:2"> <strong data-coord="prj1.umt:383:1">Standard Output</strong> </dt><dd data-coord="prj1.umt:384:0"><p data-coord="prj1.umt:384:4">An output stream, initially set up to output to the console.
+This often corresponds to file descriptor 1.
+</p></dd><dt data-coord="prj1.umt:387:2"> <strong data-coord="prj1.umt:387:1">Standard Error</strong> </dt><dd data-coord="prj1.umt:388:0"><p data-coord="prj1.umt:388:4">Another output stream, initially set up to output to the console.
+This often corresponds to file descriptor 2.
+</p></dd></dl><p data-coord="prj1.umt:391:0">So you can use these streams without needing to open any file, as they
+are already open.
+</p><p data-coord="prj1.umt:394:0">All popular languages provide access to these streams.
+</p><section data-coord="prj1.umt:396:0"><h3 data-coord="prj1.umt:396:0">Python</h3><ul data-coord="prj1.umt:399:0"><li data-coord="prj1.umt:399:0"><p data-coord="prj1.umt:399:6"><samp data-coord="prj1.umt:399:6">sys.stdin</samp>, <samp data-coord="prj1.umt:399:19">sys.stdout</samp> and <samp data-coord="prj1.umt:399:36">sys.stderr</samp> refer to the
+three streams.
+</p></li><li data-coord="prj1.umt:402:0"><p data-coord="prj1.umt:402:6"><samp data-coord="prj1.umt:402:6">sys.stdin.read()</samp> will read from standard input until EOF.
+</p></li><li data-coord="prj1.umt:405:0"><p data-coord="prj1.umt:405:6"><samp data-coord="prj1.umt:405:6">print(...)</samp> or <samp data-coord="prj1.umt:405:22">sys.stdout.write(...)</samp> will print <samp data-coord="prj1.umt:405:57">...</samp> to
+standard output (the former adds a newline). 
+</p></li><li data-coord="prj1.umt:408:0"><p data-coord="prj1.umt:408:6"><samp data-coord="prj1.umt:408:6">sys.stderr.write(...)</samp> will write <samp data-coord="prj1.umt:408:41">...</samp> to standard error.
+</p></li></ul></section><section data-coord="prj1.umt:410:0"><h3 data-coord="prj1.umt:410:0">JavaScript nodejs</h3><ul data-coord="prj1.umt:413:0"><li data-coord="prj1.umt:413:0"><p data-coord="prj1.umt:413:6"><samp data-coord="prj1.umt:413:6">0</samp>, <samp data-coord="prj1.umt:413:11">1</samp> and <samp data-coord="prj1.umt:413:19">2</samp> refer to the three streams and can be used
+wherever a file path is expected. 
+</p></li><li data-coord="prj1.umt:416:0"><p data-coord="prj1.umt:416:6"><samp data-coord="prj1.umt:416:6">fs.readFileSync(0, 'utf8')</samp> will read from standard input until EOF.
+</p></li><li data-coord="prj1.umt:418:0"><p data-coord="prj1.umt:418:6"><samp data-coord="prj1.umt:418:6">console.log(...)</samp> or <samp data-coord="prj1.umt:418:28">fs.writeFileSync(1, ...)</samp> will write <samp data-coord="prj1.umt:418:66">...</samp>
+to standard output (the former adds a newline and has additional
+functionality).
+</p></li><li data-coord="prj1.umt:422:0"><p data-coord="prj1.umt:422:6"><samp data-coord="prj1.umt:422:6">console.error(...)</samp> or <samp data-coord="prj1.umt:422:30">fs.writeFileSync(2, ...)</samp> will write
+ <samp data-coord="prj1.umt:422:75">...</samp> to standard error (the former adds a newline and has
+ additional functionality).
+</p></li></ul></section><section data-coord="prj1.umt:426:0"><h3 data-coord="prj1.umt:426:0">Ruby</h3><ul data-coord="prj1.umt:429:0"><li data-coord="prj1.umt:429:0"><p data-coord="prj1.umt:429:6">The "constants" <samp data-coord="prj1.umt:429:23">STDIN</samp>, <samp data-coord="prj1.umt:429:32">STDOUT</samp> and <samp data-coord="prj1.umt:429:45">STDERR</samp> refer to the
+three streams.
+</p></li><li data-coord="prj1.umt:432:0"><p data-coord="prj1.umt:432:6">STDIN.read  will read from standard input until EOF.
+</p></li><li data-coord="prj1.umt:434:0"><p data-coord="prj1.umt:434:6"><samp data-coord="prj1.umt:434:6">print(...)</samp> or <samp data-coord="prj1.umt:434:22">STDOUT.print(...)</samp> will write <samp data-coord="prj1.umt:434:53">...</samp> to standard
+output. <br data-coord="prj1.umt:434:85"/> <samp data-coord="prj1.umt:434:88">STDERR.print(...)</samp> will write <samp data-coord="prj1.umt:434:119">...</samp> to standard error.
+</p></li></ul></section><section data-coord="prj1.umt:437:0"><h3 data-coord="prj1.umt:437:0">Java</h3><p data-coord="prj1.umt:440:4">Java defines <samp data-coord="prj1.umt:440:17">System.in</samp>, <samp data-coord="prj1.umt:440:30">System.out</samp> and <samp data-coord="prj1.umt:440:47">System.err</samp> for the
+three streams; you can then use the smorgasbord of <samp data-coord="prj1.umt:440:123">java.io.*</samp>
+classes to read/write the streams.
+</p></section><section data-coord="prj1.umt:444:0"><h3 data-coord="prj1.umt:444:0">C++</h3><p data-coord="prj1.umt:447:4"><samp data-coord="prj1.umt:447:4">cin</samp>, <samp data-coord="prj1.umt:447:11">cout</samp> and <samp data-coord="prj1.umt:447:22">cerr</samp> from <samp data-coord="prj1.umt:447:34">iostream</samp> can be used for the
+three streams.
+</p></section><section data-coord="prj1.umt:450:0"><h3 data-coord="prj1.umt:450:0">Basic C</h3><ul data-coord="prj1.umt:453:0"><li data-coord="prj1.umt:453:0"><p data-coord="prj1.umt:453:6"><samp data-coord="prj1.umt:453:6">&lt;stdio.h&gt;</samp> defines <samp data-coord="prj1.umt:453:26">stdin</samp>, <samp data-coord="prj1.umt:453:35">stdout</samp> and <samp data-coord="prj1.umt:453:48">stderr</samp> for
+the three streams.
+</p></li><li data-coord="prj1.umt:456:0"><p data-coord="prj1.umt:456:6"><samp data-coord="prj1.umt:456:6">getchar()</samp>, <samp data-coord="prj1.umt:456:19">scanf()</samp> will read from standard input.
+</p></li><li data-coord="prj1.umt:458:0"><p data-coord="prj1.umt:458:6"><samp data-coord="prj1.umt:458:6">putchar()</samp>, <samp data-coord="prj1.umt:458:19">printf()</samp> will write to standard output.
+</p></li><li data-coord="prj1.umt:460:0"><p data-coord="prj1.umt:460:6"><samp data-coord="prj1.umt:460:6">fwrite(..., stderr)</samp>, <samp data-coord="prj1.umt:460:29">fprintf(stderr, ...)</samp> will write to
+standard error.
+</p></li></ul></section><section data-coord="prj1.umt:463:0"><h3 data-coord="prj1.umt:463:0">Using stdin within the Unix Shell</h3><p data-coord="prj1.umt:466:0">If a program is reading interactively from standard input, then it
+will freeze and wait for input to be provided on the terminal:
+</p><pre data-coord="prj1.umt:470:0">$ ./parse.sh
+#ifdef sym
+some text
+#else
+else text
+#endif
+some ending text
+^D
+</pre><p data-coord="prj1.umt:480:0">The control-D is used to indicate EOF to the terminal controller.
+</p><p data-coord="prj1.umt:482:0">It is much more convenient to use  I/O redirection in the shell:
+</p><pre data-coord="prj1.umt:485:0">$ ./parse.sh &lt; devel1.defs &gt; devel1.parse.json
+</pre><p data-coord="prj1.umt:488:0">The <samp data-coord="prj1.umt:488:4">&lt; devel1.def</samp> redirects the contents of <samp data-coord="prj1.umt:488:45">devel1.defs</samp> to the standard
+input of <samp data-coord="prj1.umt:488:84">parse.sh</samp>; the <samp data-coord="prj1.umt:488:100">&gt; devel1.parse.json</samp> redirects the standard
+output of <samp data-coord="prj1.umt:488:155">parse.sh</samp> to <samp data-coord="prj1.umt:488:169">devel1.parse.json</samp>.
+</p><p data-coord="prj1.umt:492:0">Note that <samp data-coord="prj1.umt:492:10">parse.sh</samp> is totally unaware of the redirection; the shell
+takes care of setting up the standard input and output streams so that
+they are redirected to the files.  For example, if <samp data-coord="prj1.umt:492:192">parse.sh</samp> is
+calling a python parser, then the python parser can continue using
+<samp data-coord="prj1.umt:492:273">sys.stdin</samp> and <samp data-coord="prj1.umt:492:289">sys.stdout</samp>.
+</p></section></section><section data-coord="prj1.umt:500:0"><h2 data-coord="prj1.umt:500:0">Hints</h2><p data-coord="prj1.umt:503:0">This section is not prescriptive in that you may choose to ignore
+it as long as you meet all the project requirements.
+</p><p data-coord="prj1.umt:506:0">The following points are worth noting:
+</p><ul data-coord="prj1.umt:508:0"><li data-coord="prj1.umt:508:0"><p data-coord="prj1.umt:508:4">Ideally, the implementation language for your project should
+support the following:
+</p><ul data-coord="prj1.umt:511:0"><li data-coord="prj1.umt:511:0"><p data-coord="prj1.umt:511:8">Does not require any explicit memory management.  This
+would rule out lower-level languages like C, C++, Rust.
+</p></li><li data-coord="prj1.umt:514:0"><p data-coord="prj1.umt:514:8">Support regex's either in the language or via standard
+libraries.
+</p></li><li data-coord="prj1.umt:517:0"><p data-coord="prj1.umt:517:8">Easy support for JSON, ideally via standard libraries.
+</p></li></ul><p data-coord="prj1.umt:519:4">Scripting languages like Python, Ruby, Perl or JavaScript
+will probably make the development easiest.
+</p></li><li data-coord="prj1.umt:522:0"><p data-coord="prj1.umt:522:4">It is probably a good idea to have both <samp data-coord="prj1.umt:522:44">scan.sh</samp> and
+<samp data-coord="prj1.umt:522:62">parse.sh</samp> call a single program with that program
+producing a scan or parse result depending on how
+it was invoked.
+</p></li><li data-coord="prj1.umt:528:0"><p data-coord="prj1.umt:528:4">The requirements forbid extraneous whitespace in the JSON output
+which makes the output quite hard to read.  To get around this,
+you can pipe the output through a JSON pretty-printer like
+<samp data-coord="prj1.umt:528:204">json_pp</samp> which is available on <samp data-coord="prj1.umt:528:236">remote.cs</samp>. Unfortunately, it
+seems to output the keys of an object in sorted order by name.
+This is irritating but not a show-stopper, especially since the
+choice of the name <samp data-coord="prj1.umt:528:425">xkids</samp> forces the children of an AST node to
+be printed after the other properties.
+</p></li><li data-coord="prj1.umt:537:0"><p data-coord="prj1.umt:537:4">While developing the project, you will probably be running
+tests provided in the <a href="extras" data-coord="prj1.umt:537:99">extras</a> directory.  It may
+be convenient to set up a shortcut shell variable in the
+shell you are using for developing your project.
+</p><pre>    $ extras<span class="hl opt">=</span><span class="hl kwd">$HOME</span><span class="hl opt">/</span>cs471<span class="hl opt">/</span>projects<span class="hl opt">/</span>prj<span class="hl num">1</span><span class="hl opt">/</span>extras
+    $ <span class="hl kwd">$extras</span><span class="hl opt">/</span>do-test.sh scan <span class="hl kwd">$extras</span><span class="hl opt">/</span><span class="hl kwb">test</span>s<span class="hl opt">/</span>scan0.defs</pre></li><li data-coord="prj1.umt:548:0"><p data-coord="prj1.umt:548:4">The exit status of the last shell command is available in the
+shell variable <samp data-coord="prj1.umt:548:85">$?</samp>.  You can examine it using the command
+<samp data-coord="prj1.umt:548:133">echo $?</samp>.
+</p></li><li data-coord="prj1.umt:552:0"><p data-coord="prj1.umt:552:4">Note that calling <samp data-coord="prj1.umt:552:22">match()</samp> changes the lookahead token.  So if
+you need the lexeme for a token, it should be grabbed from the
+lookahead before <samp data-coord="prj1.umt:552:156">match()</samp>ing that token.
+</p></li></ul><p data-coord="prj1.umt:556:0">You may proceed as follows:
+</p><ol data-coord="prj1.umt:558:0"><li data-coord="prj1.umt:558:0"><p data-coord="prj1.umt:558:4">Review the material covered in class on regex's, scanners,
+grammars and recursive-descent parsing.  Review the
+<em data-coord="prj1.umt:558:168"><a href="../../slides/syntax/code/arith/index.html" data-coord="prj1.umt:558:168">online parser</a></em> to
+make sure you understand the gist of how
+<a href="../../slides/syntax/code/arith/arith.mjs?colorize=true" data-coord="prj1.umt:558:298">arith.mjs</a> works without getting bogged down in the details of
+JavaScript.
+</p></li><li data-coord="prj1.umt:566:0"><p data-coord="prj1.umt:566:4">Read the project requirements thoroughly.
+</p></li><li data-coord="prj1.umt:568:0"><p data-coord="prj1.umt:568:4">Start your project in a manner similar to how you start a lab.
+Specifically, copy over the provided files and commit them to
+github:
+</p><pre>        $ <span class="hl kwb">cd</span> ~<span class="hl opt">/</span>i471?<span class="hl opt">/</span>submit
+        $ <span class="hl kwc">cp</span> <span class="hl kwb">-pr</span> ~<span class="hl opt">/</span>cs471<span class="hl opt">/</span>projects<span class="hl opt">/</span>prj<span class="hl num">1</span><span class="hl opt">/</span>prj1-sol .
+        $ <span class="hl kwb">cd</span> prj1-sol
+        $ git add .
+        $ git commit <span class="hl kwb">-m</span> <span class="hl str">&apos;started prj1&apos;</span>
+        $ git push <span class="hl kwb">-u</span> origin prj1 <span class="hl slc">#push prj1 branch to github</span></pre></li><li data-coord="prj1.umt:582:0"><p data-coord="prj1.umt:582:4">Fill in your details in the <samp data-coord="prj1.umt:582:32">README</samp> template.  Commit and push
+your changes.
+</p></li><li data-coord="prj1.umt:585:0"><p data-coord="prj1.umt:585:4">Start work on your lexer.  It is easiest to read the entire
+contents of standard input into a string and produce
+all the tokens in a list rather than one-at-a-time.
+</p><p data-coord="prj1.umt:589:4">Since the language is line oriented, split the input string
+into lines.  Keep some kind of <samp data-coord="prj1.umt:589:99">text</samp> variable used for
+accumulating consecutive text lines.
+</p><p data-coord="prj1.umt:593:4">Look at each line to classify it as either a text line or a
+directive line.
+</p><ul data-coord="prj1.umt:596:0"><li data-coord="prj1.umt:596:0"><p data-coord="prj1.umt:596:8">If it is a text line, simply append the lexeme to the
+<samp data-coord="prj1.umt:596:70">text</samp> variable.
+</p></li><li data-coord="prj1.umt:599:0"><p data-coord="prj1.umt:599:8">If it is a directive line:
+</p><ol data-coord="prj1.umt:601:0"><li data-coord="prj1.umt:601:0"><p data-coord="prj1.umt:601:11">If the <samp data-coord="prj1.umt:601:18">text</samp> variable is non-empty add a suitable <samp data-coord="prj1.umt:601:62">TEXT</samp>
+token pair to the output token list and reset the <samp data-coord="prj1.umt:601:130">text</samp>
+variable to empty.
+</p></li><li data-coord="prj1.umt:605:0"><p data-coord="prj1.umt:605:11">Emit the token for the starting directive to the output token
+list.
+</p></li><li data-coord="prj1.umt:608:0"><p data-coord="prj1.umt:608:11">If the starting directive was a <samp data-coord="prj1.umt:608:43">#ifdef</samp>, <samp data-coord="prj1.umt:608:53">#ifndef</samp> or
+<samp data-coord="prj1.umt:608:77">#elif</samp>, look for a <samp data-coord="prj1.umt:608:97">SYM</samp>.  If found, add it to the output
+token list.
+</p></li><li data-coord="prj1.umt:612:0"><p data-coord="prj1.umt:612:11">Discard the rest of the directive line.
+</p></li></ol></li></ul><p data-coord="prj1.umt:614:4">Be sure to emit any leftover text to the token list when
+you finish with all the lines.
+</p><p data-coord="prj1.umt:617:4">Set up the <samp data-coord="prj1.umt:617:15">scan.sh</samp> script to drive your lexer program.  Set up
+the <samp data-coord="prj1.umt:617:77">make.sh</samp> script too if your implementation language requires
+a separated compilation step.
+</p><p data-coord="prj1.umt:621:4">Test your lexer using the provided scanner tests:
+</p><pre>    $ <span class="hl kwd">$extras</span><span class="hl opt">/</span>do-test.sh scan <span class="hl kwd">$extras</span><span class="hl opt">/</span><span class="hl kwb">test</span>s<span class="hl opt">/</span>scan.defs</pre><p data-coord="prj1.umt:628:4">Once you feel that you have the lexer working, run all the scanner
+tests:
+</p><pre>    $ <span class="hl kwd">$extras</span><span class="hl opt">/</span>run-all-tests.sh scanner-tests-only</pre></li><li data-coord="prj1.umt:636:0"><p data-coord="prj1.umt:636:4">Implement your parser.  Initialize it with a list of all the
+tokens for standard input. It may be a good idea to add an
+artificial <samp data-coord="prj1.umt:636:143">EOF</samp> token to the list produced by the scanner,
+avoiding the need for the parser to check for an empty list.
+</p><ol data-coord="prj1.umt:641:0"><li data-coord="prj1.umt:641:0"><p data-coord="prj1.umt:641:8">Set it up to maintain a <samp data-coord="prj1.umt:641:32">lookahead</samp> token as some sort of
+"global" or instance variable.  Make sure that when your
+parser is initialized, it primes the <samp data-coord="prj1.umt:641:177">lookahead</samp> with the
+first token read from the lexer.
+</p></li><li data-coord="prj1.umt:646:0"><p data-coord="prj1.umt:646:8">Write a <samp data-coord="prj1.umt:646:16">peek(kind)</samp> function which returns true iff the
+current lookahead has the same <samp data-coord="prj1.umt:646:104">kind</samp>.  Note that since this
+parser is quite straightforward, it is possible to avoid
+writing a <samp data-coord="prj1.umt:646:217">peek()</samp> and merely code the necessary tests into
+the rest of the parser code.
+</p></li><li data-coord="prj1.umt:652:0"><p data-coord="prj1.umt:652:8">Write a <samp data-coord="prj1.umt:652:16">match(kind)</samp> function which advances the <samp data-coord="prj1.umt:652:58">lookahead</samp>
+to the next token from the lexer if the <samp data-coord="prj1.umt:652:118">lookahead</samp> token has
+the same <samp data-coord="prj1.umt:652:157">kind</samp>.  It should output an error message to
+standard error and terminate the program with a non-zero exit
+code if the <samp data-coord="prj1.umt:652:293">kind</samp>'s differ.
+</p></li><li data-coord="prj1.umt:658:0"><p data-coord="prj1.umt:658:8">Write the parser following the recipe provided in class
+for EBNF grammars.
+</p><ul data-coord="prj1.umt:661:0"><li data-coord="prj1.umt:661:0"><p data-coord="prj1.umt:661:13">Since the grammar has only two non-terminals, you
+will need only two parsing functions <samp data-coord="prj1.umt:661:106">source()</samp> and
+<samp data-coord="prj1.umt:661:127">ifdef()</samp>.  You should set up each parsing function
+to return the AST for the tokens which it recognizes.
+</p></li><li data-coord="prj1.umt:666:0"><p data-coord="prj1.umt:666:13">The code for <samp data-coord="prj1.umt:666:26">source()</samp> should initialize an empty
+result list.  Use a <code><span class="hl kwa">while</span></code> loop for its body
+since its RHS consists of zero-or-more repetitions.
+Within the loop, check the lookahead:
+</p><ol data-coord="prj1.umt:671:0"><li data-coord="prj1.umt:671:0"><p data-coord="prj1.umt:671:10">If it is a <samp data-coord="prj1.umt:671:21">TEXT</samp> token, then add the corresponding
+AST to the result list and continue with the loop.
+</p></li><li data-coord="prj1.umt:674:0"><p data-coord="prj1.umt:674:17">If it is a <samp data-coord="prj1.umt:674:28">IFDEF</samp> or <samp data-coord="prj1.umt:674:39">IFNDEF</samp> token, call the
+<samp data-coord="prj1.umt:674:74">ifdef()</samp> parsing function and add its result to
+the result list and continue with the loop.
+</p></li><li data-coord="prj1.umt:678:0"><p data-coord="prj1.umt:678:17">If it is not one of the previous two cases,
+terminate the loop and return the result list.
+</p></li></ol></li><li data-coord="prj1.umt:681:0"><p data-coord="prj1.umt:681:13">The code for <samp data-coord="prj1.umt:681:26">ifdef()</samp> should match the starting <samp data-coord="prj1.umt:681:62">IFDEF</samp>
+or <samp data-coord="prj1.umt:681:79">IFNDEF</samp> token and then match a <samp data-coord="prj1.umt:681:111">SYM</samp> token.  It
+should then call <samp data-coord="prj1.umt:681:151">source()</samp> to obtain the list of ASTs
+for the nested source.  This returned list will be the
+kids of the AST being constructed.  Then <code><span class="hl kwa">while</span></code> the
+lookahead is <samp data-coord="prj1.umt:681:329">ELIF</samp>, construct AST's for <samp data-coord="prj1.umt:681:357">ELIF</samp> as per
+the grammar, appending them to the kids list.  If the
+lookahead after the <samp data-coord="prj1.umt:681:457">ELIF</samp> loop is an <samp data-coord="prj1.umt:681:475">ELSE</samp>, add an AST
+for the <samp data-coord="prj1.umt:681:508">ELSE</samp> to the kids list. At that point, the
+lookahead must match a <samp data-coord="prj1.umt:681:581">ENDIF</samp> token.  Finally, construct
+and return the overall AST for the <samp data-coord="prj1.umt:681:657">IFDEF</samp>/<samp data-coord="prj1.umt:681:669">IFNDEF</samp>
+AST by build an object containing the tag, sym and kids.
+</p></li></ul></li></ol><p data-coord="prj1.umt:694:4">Test your parser using the provided scanner tests:
+</p><pre>    $ <span class="hl kwd">$extras</span><span class="hl opt">/</span>do-test.sh parse <span class="hl kwd">$extras</span><span class="hl opt">/</span><span class="hl kwb">test</span>s<span class="hl opt">/</span>parse0.defs</pre><p data-coord="prj1.umt:701:4">Once you feel that you have the parser working, run all the scanner
+and parser tests:
+</p><pre>    $ <span class="hl kwd">$extras</span><span class="hl opt">/</span>run-all-tests.sh</pre></li><li data-coord="prj1.umt:709:0"><p data-coord="prj1.umt:709:4">Iterate until you meet all requirements.
+</p></li></ol><p data-coord="prj1.umt:711:0">It is always a good idea to keep committing your project to github
+periodically to ensure that you do not accidentally lose work.
+</p></section><section data-coord="prj1.umt:714:0"><h2 data-coord="prj1.umt:714:0">Submission</h2><p data-coord="prj1.umt:717:0">Before submitting your project, update your README to specify the
+status of your project.  Document any known issues.
+</p><p data-coord="prj1.umt:720:0">Submit using a procedure similar to that used in your labs:
+</p><pre>    $ <span class="hl kwb">cd</span> ~<span class="hl opt">/</span>i471?
+    $ git branch <span class="hl kwb">-l</span>       <span class="hl slc">#list all branches;</span>
+                          <span class="hl slc"># current branch has *, should be prj1.</span>
+    $ git checkout main   <span class="hl slc">#goto main branch</span>
+    $ git pull            <span class="hl slc"># pull changes (if any)</span>
+    $ git checkout prj1   <span class="hl slc">#back to prj1 branch</span>
+    $ git merge <span class="hl kwb">-m</span> <span class="hl str">&apos;merged main&apos;</span> main  <span class="hl slc"># may not do anything</span>
+    $ git status <span class="hl kwb">-s</span>       <span class="hl slc">#should show any non-committed changes</span>
+    $ git commit <span class="hl kwb">-a -m</span> <span class="hl str">&apos;completing prj1&apos;</span>
+    $ git push            <span class="hl slc">#push prj1 branch to github</span>
+    $ git checkout main   <span class="hl slc">#switch to main branch</span>
+    $ git merge prj1 <span class="hl kwb">-m</span> <span class="hl str">&apos;merged prj1&apos;</span> <span class="hl slc">#merge in prj1 branch</span>
+    $ git push            <span class="hl slc">#submit project</span></pre></section><section data-coord="prj1.umt:740:0"><h2 data-coord="prj1.umt:740:0">References</h2><ul data-coord="prj1.umt:743:0"><li data-coord="prj1.umt:743:0"><p data-coord="prj1.umt:743:4"><em data-coord="prj1.umt:743:81"><a href="https://en.wikipedia.org/wiki/Recursive_descent_parser#Example_parser" data-coord="prj1.umt:743:81">Example Parser</a></em> <span id="refs" data-coord="prj1.umt:743:106">from</span> Wikipedia article on <em data-coord="prj1.umt:743:132">Recursive
+    descent parser</em>.  Note that the grammar notation is slightly
+different:
+</p><ul data-coord="prj1.umt:748:0"><li data-coord="prj1.umt:748:0"><p data-coord="prj1.umt:748:8"><samp data-coord="prj1.umt:748:8">{</samp> X <samp data-coord="prj1.umt:748:14">}</samp> is used to indicate 0-or-more repetitions of X instead of
+<samp data-coord="prj1.umt:748:84">X*</samp>.
+</p></li><li data-coord="prj1.umt:751:0"><p data-coord="prj1.umt:751:8"><samp data-coord="prj1.umt:751:8">[ X ]</samp> is used to indicate an optional <samp data-coord="prj1.umt:751:48">X</samp> instead of <samp data-coord="prj1.umt:751:63">X?</samp>.
+</p></li></ul><p data-coord="prj1.umt:753:4">The parser uses <samp data-coord="prj1.umt:753:20">accept()</samp> and <samp data-coord="prj1.umt:753:35">expect()</samp> instead of our <samp data-coord="prj1.umt:753:61">check()</samp>
+and <samp data-coord="prj1.umt:753:79">match()</samp>.  The semantics of the routines are slightly
+different: they get the next token in <samp data-coord="prj1.umt:753:176">accept()</samp>, whereas we get
+the next token in <samp data-coord="prj1.umt:753:225">match()</samp>.
+</p></li><li data-coord="prj1.umt:758:0"><p data-coord="prj1.umt:758:4"><em data-coord="prj1.umt:758:82"><a href="https://www.cs.cornell.edu/courses/cs2112/2015fa/lectures/lec_parsing/" data-coord="prj1.umt:758:82">Grammars and Parsing</a></em>, discusses building ASTs.  The <samp data-coord="prj1.umt:758:136">peek()</samp> and
+<samp data-coord="prj1.umt:758:153">consume()</samp> routines are exactly equivalent to our <samp data-coord="prj1.umt:758:204">check()</samp> and
+<samp data-coord="prj1.umt:758:222">match()</samp>.
+</p></li></ul></section></section>
+    </div> <!-- #content -->
+    <script src="../../assets/scripts/loginAction.js"></script>
+  </body>
+</html>

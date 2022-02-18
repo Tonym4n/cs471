@@ -1,0 +1,20 @@
+Name:		Tony Man
+B-Number:	B00771526
+Email:		Tman1@binghamton.edu
+
+*100% finished based on run-all-tests.sh*
+
+From the prj1-sol directory, type:
+	./make.sh
+
+To run the code with run-all-test.sh:
+	../extras/run-all-tests.sh
+
+To run the code with do-test.sh:
+	../extras/do-test.sh scan|parse DEFS_FILE
+
+To run the code with a specific .defs file:
+	./scan.sh|./parse.sh DEFS_FILE
+
+To run the code with cin (CTRL + d to stop):
+	./scan.sh|./parse.sh
