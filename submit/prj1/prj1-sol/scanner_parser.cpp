@@ -6,18 +6,6 @@
 #include <regex>
 #include <algorithm>
 
-using std::cout;
-using std::cerr;
-using std::endl; 
-using std::string;
-using std::ifstream;
-using std::vector;
-using std::pair;
-using std::smatch;
-using std::regex;
-using std::regex_search;
-using std::make_pair;
-using std::transform;
 using namespace std;
 
 
