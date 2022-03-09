@@ -26,23 +26,46 @@
 ;;with an uppercase letter whereas non-terminal symbols are
 ;;Scheme symbols which are not terminal symbols.
 (define (parse gram toks)
-  '())
+  (if (null? (parse-nonterm gram toks (caar gram)))
+    #t
+    #f
+  )
+)
 ;(trace parse)
 
 (define (parse-nonterm gram toks nonterm)
-  '())
+  (parse-rhss gram toks (rhss gram nonterm))
+)
 ;(trace parse-nonterm)
 
 (define (parse-rhss gram toks rhss)
-  '())
+  (if (null? rhss)
+    #f
+    (or (parse-rhs gram toks (car rhss)) (parse-rhss gram toks (cdr rhss)))
+  )
+)
 ;(trace parse-rhss)
 
 (define (parse-rhs gram toks rhs)
-  '())
+  (if (null? rhs)
+    toks
+    (let 
+      ( [toks1 (parse-sym gram toks (car rhs))] ) 
+      (and toks1 (parse-rhs gram toks1 (cdr rhs)))
+    )
+  )
+)
 ;(trace parse-rhs)
 
 (define (parse-sym gram toks sym)
-  '())
+  (if (terminal? sym)
+    (if (and (not (null? toks)) (equal? (caar toks) sym))
+      (cdr toks)
+      #f
+    )
+    (parse-nonterm gram toks sym)
+  )
+)
 ;(trace parse-sym)
 
 ;;; Utility Functions
