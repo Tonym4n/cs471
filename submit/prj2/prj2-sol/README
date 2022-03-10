@@ -2,10 +2,13 @@ Name:		Tony Man
 B-Number:	B00771526
 Email:		Tman1@binghamton.edu
 
-*100% finished based on test-ifdef-parse.sh*
+*100% finished*
 
-To run the code with test-ifdef-parse.sh:
-	../extras/test-ifdef-parse.sh ~/cs471/cs471/projects/prj1/extras/tests/
+To run the code for 1-8:
+	./prj2-sol.scm
 
 To run the code with scan.sh:
-	 ./scan.sh < ~/cs471/cs471/projects/prj1/extras/tests/DEFS_FILE
+	 ./scan.sh < ../extras/tests/DEFS_FILE
+
+To run the code with test-ifdef-parse.sh:
+	../extras/test-ifdef-parse.sh ../extras/tests/
