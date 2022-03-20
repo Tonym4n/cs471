@@ -1,0 +1,110 @@
+Script started on 2022-03-20 15:08:00-04:00 [TERM="xterm-256color" TTY="/dev/pts/18" COLUMNS="104" LINES="49"]
+[?2004htman1@remote01:~/cs471/projects/i471b/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- f(X, a[10G)[5G[11G = f(a, Y[20G)[15G[21G.
+X = Y, Y = a.
+
+?- f(X, a[10G)[5G[11G = f(a, X[20G)[15G[21G.
+X = a.
+
+?- f(X, a[10G)[5G[11G = f(b, X[20G)[15G[21G.
+[1;31mfalse.[0m
+
+?- f(X, Y[10G)[5G[11G = f(a, a[20G)[15G[21G, g(X, Y[29G)[24G[30G = g(a, b[39G)[34G[40G.
+[1;31mfalse.[0m
+
+?- ?- f(X, Y) = f(a, a), g(X, Y) = g(a, b).[9Ga) = f(b, X).[K[16Ga[22G[19GY).?- halt.[K?- f(X, a) = f(a, Y).[21G[K; f(X,a [28G[27G[K a[29G)[24G[30G = f(a, X[39G)[34G[40G;[40G[K.
+X = Y, Y = a [1m;[0m
+X = a.
+
+?- % f(1, 2, z[15G)[7G[16G = f(_, _, X[28G)[20G[29G.
+|    .[6G[K^C
+Action (h for help) ? Unknown option (h for help)
+Action (h for help) ? Options:
+a:           abort         b:           break
+c:           continue      e:           exit
+g:           goals         s:           C-backtrace
+t:           trace         p:		  Show PID
+h (?):       help
+Action (h for help) ? abort
+[32m% Execution Aborted
+[0m?- f(1, 2, z[13G)[5G[14G = f(_, _, X[26G)[18G[27G.
+X = z.
+
+?- head(a, tail(z, B[21G)[16G[22G, Y[25G)[8G[26G = head(_, tail(X, _[46G)[41G[47G, _[50G)[33G[51G.
+X = z.
+
+?- cons(a, cons(b, cons(c, z[29G)[24G[30G[30G)[16G[31G[31G)[8G[32G = cons(_, cons(_, cons(_, X[60G)[55G[61G[61G)[47G[62G[62G)[39G[63G.
+X = z.
+
+?- [1, 2, 3, 4[15G][4G[16G = [_|[_|Cddr[29G][22G[30G[30G][19G[31G.
+Cddr = [3, 4].
+
+?- [1, 2, 3, 4[15G][4G[16G = [_|[_|[Caddr|_[33G][25G[34G[34G][22G[35G[35G][19G[36G.
+Caddr = 3.
+
+?- [[1, 2[10G][5G[11G, 3, 4[17G][4G[18G = [[_|Cdar[29G][22G[30G|_[32G][21G[33G.[[1, 2[40G][35G[41G, 3, 4[47G][34G[48G = [[_|Cdar[59G][52G[60G|_[62G][51G[63G.[63G[K[62G[K[61G[K[60G[K[59G[K[58G[K[57G[K[56G[K[55G[K[54G[K[53G[K[52G[K[51G[K[50G[49G[K[48G[47G[K[46G[K[45G[44G[K[43G[K[42G[41G[K[40G[K[39G[K[38G[37G[K[36G[K[35G[K[34G[K
+Cdar = [2].
+
+?- [?- ['[6Glab6[10G
+lab6.LOG      lab6-sol.pro
+[K?- ['lab6-[11Gsol.pro[18G'[5G[19G[19G][4G[20G.
+[31mWarning: /home/tman1/cs471/projects/i471b/submit/lab6/lab6-sol.pro:19:
+Warning:    Singleton variables: [C]
+[0m[1mtrue.[0m
+
+?- N = 1 + 2.
+ 1 + 2*3.
+5 is 7 mod 2.
+X is 7 mod 2.
+X is -7 mod 3.
+N is sqrt(4).
+N = pi.
+N is pi.N = 1+2.
+
+?- N is 1 + 2.
+N = 3.
+
+?- N is 1 + 2*3.
+N = 7.
+
+?- 5 is 7 mod 2.
+[1;31mfalse.[0m
+
+?- X is 7 mod 2.
+X = 1.
+
+?- X is -7 mod 3.
+X = 2.
+
+?- N is sqrt(4[15G)(4).
+N = 2.0.
+
+?- N = pi.
+N = pi.
+
+?- N is pi.
+N = 3.141592653589793.
+
+?- quadratic_roots(2, 5, 2, Z[30G)[19G[31G.
+Z = -0.5 [1m;[0m
+Z = -2.0.
+
+?- ?- quadratic_roots(2, 5, 2, Z).[19G[1@2(
+Z = -0.5 [1m;[0m
+Z = -2.0.
+
+?- sum_lengths([[1, 2[22G][17G[23G, [3, [4, 5[34G][29G[35G, 6[38G][25G[39G, [7, 8[46G][41G[47G, [9[51G][9][52G][16G[53G, Z[56G)[15G[57G.
+Z = 8.
+
+?- halt.
+[?2004htman1@remote01:~/cs471/projects/i471b/submit/lab6$ exit
+[?2004lexit
+
+Script done on 2022-03-20 15:12:19-04:00 [COMMAND_EXIT_CODE="0"]
