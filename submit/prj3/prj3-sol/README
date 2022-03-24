@@ -1,0 +1,11 @@
+Name:		Tony Man
+B-Number:	B00771526
+Email:		Tman1@binghamton.edu
+
+*100% finished*
+
+To run the code for all tests:
+	./do-tests.sh test_prj3_sol.pl
+
+To run the code for a specific test:
+	./do-tests.sh test_prj3_sol.pl [TEST_NAME]
