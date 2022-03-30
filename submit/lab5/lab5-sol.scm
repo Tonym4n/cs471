@@ -21,8 +21,8 @@
 	(letrec ([aux-sum-lengths
 		(lambda (acc ls)
 			(if (null? ls)
-				0
-				(+ (length (car ls)) (aux-sum-lengths acc (cdr ls)))))])
+				acc
+				(aux-sum-lengths (+ acc (length (car ls))) (cdr ls))))])
 		(aux-sum-lengths 0 ls)))
 
 (check-eq? (sum-lengths-tr '()) 0)
@@ -37,8 +37,8 @@
 	(letrec ([aux-poly-eval
 		(lambda (acc x xPow coeffs)
 			(if (null? coeffs)
-				0
-				(+ (* (car coeffs) (expt x xPow)) (aux-poly-eval acc x (+ xPow 1) (cdr coeffs)))))])
+				acc
+				(aux-poly-eval (+ (* (car coeffs) (expt x xPow)) acc) x (+ xPow 1) (cdr coeffs))))])
 		(aux-poly-eval 0 x 0 coeffs)))
 
 
