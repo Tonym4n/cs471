@@ -14,8 +14,9 @@ testIsAllGreaterThan1 = do
   assertTrue "isAllGreaterThan1 all true" (isAllGreaterThan1 [5, 7] 4)
   assertFalse "isAllGreaterThan1 last fail" (isAllGreaterThan1 [5, 7, 4] 4)
 
-isAllGreaterThan1 _ _ = True  -- TODO
-
+isAllGreaterThan1 [] n = True
+isAllGreaterThan1 (x:xs) n =
+  x > n && isAllGreaterThan1 xs n
 
 -------------------------- isAllGreaterThan2 ----------------------------
 
@@ -32,7 +33,8 @@ testIsAllGreaterThan2 = do
   assertTrue "isAllGreaterThan2 all true" (isAllGreaterThan2 [5, 7] 4)
   assertFalse "isAllGreaterThan2 last fail" (isAllGreaterThan2 [5, 7, 4] 4)
 
-isAllGreaterThan2 ns n = True -- TODO
+isAllGreaterThan2 xs n =
+  all (> n) xs
 
 -------------------------- isAllGreaterThan3 ---------------------------
 
@@ -50,7 +52,8 @@ testIsAllGreaterThan3 = do
   assertTrue "isAllGreaterThan3 all true" (isAllGreaterThan3 [5, 7] 4)
   assertFalse "isAllGreaterThan3 last fail" (isAllGreaterThan3 [5, 7, 4] 4)
 
-isAllGreaterThan3 ns n = True -- TODO
+isAllGreaterThan3 xs n =
+  foldl (\acc x -> acc && x > n) True xs
 
 --------------------------- mapToGreaterThan ----------------------------
 
@@ -72,7 +75,8 @@ testMapToGreaterThan = do
   assertEq "mapToGreaterThan some"
            (mapToGreaterThan [4, 5, 6] 5) [False, False, True]
 
-mapToGreaterThan xs n = [] -- TODO
+mapToGreaterThan xs n =
+  map (\x -> x > n) xs
 
 -------------------------- getAllGreaterThan1 ---------------------------
 
@@ -89,7 +93,10 @@ testGetAllGreaterThan1 = do
   assertEq "getAllGreaterThan1 all true" (getAllGreaterThan1 [5, 7] 4) [5, 7]
   assertEq "getAllGreaterThan1 not last" (getAllGreaterThan1 [5, 7, 4] 4) [5, 7]
 
-getAllGreaterThan1 _ _ = [] -- TODO
+getAllGreaterThan1 [] n = []
+getAllGreaterThan1 (x:xs) n 
+  | x > n = x:getAllGreaterThan1 xs n
+  | otherwise = getAllGreaterThan1 xs n
 
 -------------------------- getAllGreaterThan2 ---------------------------
 
@@ -105,8 +112,8 @@ testGetAllGreaterThan2 = do
   assertEq "getAllGreaterThan2 all true" (getAllGreaterThan2 [5, 7] 4) [5, 7]
   assertEq "getAllGreaterThan2 not last" (getAllGreaterThan2 [5, 7, 4] 4) [5, 7]
 
-getAllGreaterThan2 ns n = [] -- TODO
-
+getAllGreaterThan2 xs n =
+  filter (\x -> x > n) xs
 
 -------------------------- splitIntoLists2 ------------------------------
 
@@ -131,8 +138,10 @@ testSplitIntoLists2 = do
   assertEq "splitIntoLists2 6-elements"
             (splitIntoLists2 [2, 2, 2, 1, 4, 1]) [[2, 2], [2, 1], [4, 1]]
 
-splitIntoLists2 _ = [] -- TODO
-
+splitIntoLists2 [] = []
+splitIntoLists2 (x:[]) = [[x]]
+splitIntoLists2 (x:y:xs) = 
+  [[x, y]] ++ splitIntoLists2 xs
 
 -------------------------- splitIntoPairs -------------------------------
 
@@ -163,7 +172,14 @@ testSplitIntoPairs = do
   assertEq "splitIntoPairs 6-elements"
             (splitIntoPairs [2, 2, 2, 1, 4, 1]) (Just [(2, 2), (2, 1), (4, 1)])
 
-splitIntoPairs _ = Nothing -- TODO
+splitIntoPairs [] = Just []
+splitIntoPairs (x:[]) = Nothing
+splitIntoPairs (x:y:xs) 
+  | odd (length xs) = Nothing
+  | otherwise = 
+    Just ([(x, y)] ++ 
+      (case (splitIntoPairs xs) of 
+        (Just x) -> x))
 
 -------------------------------- nPrefix --------------------------------
 
@@ -187,7 +203,13 @@ testNPrefix = do
   assertEq "testNPrefix 2" (nPrefix [1, 2, 3, 4] 2) ([1, 2], [3, 4])
   assertEq "testNPrefix 5" (nPrefix [1, 2, 3, 4] 5) ([], [1, 2, 3, 4])
   
-nPrefix _ _ = ([], []) -- TODO
+nPrefix xs n 
+  | length xs < n = ([], xs)
+  | otherwise = nPrefixAux xs n []
+
+nPrefixAux xs 0 list = (list, xs)
+nPrefixAux (x:xs) n list =
+  nPrefixAux xs (n - 1) (list ++ [x])
 
 ----------------------------- splitIntoNLists ---------------------------
 
@@ -217,7 +239,13 @@ testSplitIntoNLists = do
   assertEq "splitIntoNLists 4-elements 3"
            (splitIntoNLists [1, 2, 3, 4] 3) [[1, 2, 3], [4]]
 
-splitIntoNLists _ _ = [] -- TODO
+splitIntoNLists [] n = []
+splitIntoNLists xs n
+  | length (snd (nPrefix xs n)) == 0 = [fst (nPrefix xs n)]
+  | length (snd (nPrefix xs n)) < n = 
+    [fst (nPrefix xs n)] ++ [snd (nPrefix xs n)]
+  | otherwise = 
+    [fst (nPrefix xs n)] ++ splitIntoNLists (snd (nPrefix xs n)) n
 
 ------------------------------ Run All Tests ----------------------------
 
