@@ -1,0 +1,782 @@
+Script started on 2022-04-28 17:17:36-04:00 [TERM="xterm-256color" TTY="/dev/pts/23" COLUMNS="104" LINES="49"]
+[?2004htman1@remote07:~/cs471/projects/i471b/submit/lab8$ ls
+[?2004llab8.LOG  lab8_sol.beam  lab8_sol.erl
+[?2004htman1@remote07:~/cs471/projects/i471b/submit/lab8$ erl
+[?2004lErlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Eshell V11.1.8  (abort with ^G)
+1> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+2> X = 123.
+123
+3> 123 = X.
+123
+4> 123 = Y.
+* 1: variable 'Y' is unbound
+5> Shapes = [ { square, 2 }, { circle, 1 }, { square, 4 } ].
+[{square,2},{circle,1},{square,4}]
+6> [{_, Side1}, _, {_, Side3}|_][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = Shapes.
+[{square,2},{circle,1},{square,4}]
+7> SSides = [ Side1, Side3 ].
+[2,4]
+8> Sides.
+* 1: variable 'Sides' is unbound
+9>    9> Sides.[C         9> SSides = [ Side1, Side3 ].Sides = [ Side1, Side3 ]. [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[2,4]
+10>     10> Sides = [ Side1, Side3 ].                             10> Sides.
+[2,4]
+11> lab8_sol:
+grades_data/0  module_info/0  module_info/1  shapes_data/0  
+11> lab8_sol:shapes_data()[C[C.
+[{square,2},
+ {circle,1},
+ {square,1},
+ {square,3},
+ {circle,2},
+ {square,4}]
+12> Grades = [ {bill, 82}[C[C[C[C[C[C[C[C[C[C, {sue, 95}, { john, 85} ].
+[{bill,82},{sue,95},{john,85}]
+13> Grade3 = [_, _, {                 Grr ades =            [_, _, Grades3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = Grades  es.
+[{bill,82},{sue,95},{john,85}]
+14> Grades3.
+{john,85}
+15> b()[C[C.
+Grades = [{bill,82},{sue,95},{john,85}]
+Grades3 = {john,85}
+SSides = [2,4]
+Shapes = [{square,2},{circle,1},{square,4}]
+Side1 = 2
+Side3 = 4
+Sides = [2,4]
+X = 123
+ok
+16> f(SSides)[C[C[C[C[C[C[C[C.
+ok
+17> b()[C[C.
+Grades = [{bill,82},{sue,95},{john,85}]
+Grades3 = {john,85}
+Shapes = [{square,2},{circle,1},{square,4}]
+Side1 = 2
+Side3 = 4
+Sides = [2,4]
+X = 123
+ok
+18> [{_, points      Point1,   }[C[C[C[C[C[C[C[C[C[C[C, {_, Point2}[C[C[C[C[C[C[C[C[C[C[C, {_, Point3) { }[C[C[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.  = Grae des
+18> .
+[{bill,82},{sue,95},{john,85}]
+19> Points = [Point, 1, Point2, Point3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+"R_U"
+20> Points.
+"R_U"
+21> Point1.
+82
+22> Point2.
+95
+23> Point3.
+85
+24>     24> Point3.           24> Point2.           24> Point1.           24> Points.           24> Points = [Point1, Point2, Point3].                                      24> .     24> Points = [Point1, Point2, Point3].                                      24> .     24> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.
+[{bill,82},{sue,95},{john,85}]
+25>     25> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     25> Point3.           25> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     25> Point3.           25> Point2.           25> Point3.           25> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     25>     25> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     25> Point3.           25> Point2.           25> Point1.           25> Points.           25> Points = [Point1, Point2, Point3].
+"R_U"
+26>     26> Points = [Point1, Point2, Point3].                                      26> io:format("_ ~w~n", [Points][C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[82,95,85]
+ok
+27>     27> io:format("~w~n", [Points]).", [Points]). ", [Points]). [C[C[C[C[C[C[C[C[C[C[C[C[C
+[82,95,85]ok
+28>     28> io:format("~w", [Points]).                              28> io:format("~w~n", [Points]).
+[82,95,85]
+ok
+29> Grades2 = Grades.                 [{  Grades2 =               29> io:format("~w~n", [Points]).                                29> io:format("~w", [Points]).                              29> io:format("~w~n", [Points]).                                29> Points = [Point1, Point2, Point3].                                      29> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     29> Point3.           29> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.2.[C }, {_, Point2}, {_, Point3}] = Grades2.+}, {_, Point2}, {_, Point3}] = Grades2. }, {_, Point2}, {_, Point3}] = Grades2.2}, {_, Point2}, {_, Point3}] = Grades2.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C }, {_, Point3}] = Grades2.+}, {_, Point3}] = Grades2. }, {_, Point3}] = Grades2.2}, {_, Point3}] = Grades2.[C[C[C[C[C[C[C[C[C[C[C[C[C[C }] = Grades2.+}] = Grades2. }] = Grades2.2}] = Grades2.[C[C[C[C[C[C[C[C[C[C[C[C[C
+* 1: variable 'Grades2' is unbound
+30>     30> [{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}] = Grades2.                                                                  30> Grades2 =               30> io:format("~w~n", [Points]).                                30> io:format("~w", [Points]).                              30> io:format("~w~n", [Points]).                                30> Points = [Point1, Point2, Point3].                                      30> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.
+[{bill,82},{sue,95},{john,85}]
+31>     31> [{_, Point1}, {_, Point2}, {_, Point3}] = Grades.                                                     31> [{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}] = Grades2.                                                                  31> Grades2 =               31> [{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}] = Grades2.. . . . . . . . . . G[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].r[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].a[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].d[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].e[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].s[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].2[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}]. [{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].=[{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}]. [{_, Point1 + 2}, {_, Point2 + 2}, {_, Point3 + 2}].[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+* 1: variable '_' is unbound
+32> Grades  2 = [ {bill, 82}, {sue, 95}, { john, 85} ][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.+} ]. } ].2} ]. + 2} ].[C }, { john, 85 + 2} ].+}, { john, 85 + 2} ]. }, { john, 85 + 2} ].2}, { john, 85 + 2} ]. }, {sue, 95 + 2}, { john, 85 + 2} ].+}, {sue, 95 + 2}, { john, 85 + 2} ]. }, {sue, 95 + 2}, { john, 85 + 2} ].2}, {sue, 95 + 2}, { john, 85 + 2} ].[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[{bill,84},{sue,97},{john,87}]
+33> Grades2.
+[{bill,84},{sue,97},{john,87}]
+34> f(Grades2)[C[C[C[C[C[C[C[C[C.
+ok
+35>     35> f(Grades2).               35> Grades2.
+* 1: variable 'Grades2' is unbound
+36> [{A, P1}[C[C[C[C[C[C[C, {B, P2}[C[C[C[C[C[C[C, {C, P3}[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = Grades.
+[{bill,82},{sue,95},{john,85}]
+37> Grades2 = [{A, P1+2}[C[C[C[C[C[C[C[C[C, {B, P2+2}[C[C[C[C[C[C[C[C[C, {C, P3+@ 2}[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[{bill,84},{sue,97},{john,87}]
+38> Grades2.
+[{bill,84},{sue,97},{john,87}]
+39> erl. .
+erl
+40> q()[C[C.
+ok
+41> [?2004htman1@remote07:~/cs471/projects/i471b/submit/lab8$ exit
+[?2004lexit
+
+Script done on 2022-04-28 17:30:00-04:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2022-05-01 22:35:00-04:00 [TERM="xterm-256color" TTY="/dev/pts/24" COLUMNS="104" LINES="49"]
+[?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ erl
+[?2004lErlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Eshell V11.1.8  (abort with ^G)
+1> c(l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+1> c(l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+1> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+2> lab8_sol:
+grades_data/0  module_info/0  module_info/1  perimeter/1    shapes_data/0  
+
+2> lab8_sol:
+grades_data/0  module_info/0  module_info/1  perimeter/1    shapes_data/0  
+
+2> lab8_sol:perimeter({circlie  e, 1}[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C.
+6.28318
+3> l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+3> laa b8_sol:perimeter({square, 2}[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C.
+8
+4> lab8_sol:perimeter({rectangel,     le, 2, 3}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+** exception error: no function clause matching lab8_sol:perimeter({rectangle,2,3}) (lab8_sol.erl, line 22)
+5>    5> lab8_sol:perimeter({rectangle, 2, 3}).                                         5> c(l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+5> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C( .
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+6> l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+6> lab8_sol:guard_perimeter({Square, 2}[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C.
+* 1: variable 'Square' is unbound
+7>    7> lab8_sol:guard_perimeter({Square, 2}).quare, 2}). square, 2}).[C[C[C[C[C[C[C[C[C[C[C
+8
+8>    8> lab8_sol:guard_perimeter({square, 2}).                                         8> lab8_sol:guard_perimeter({Square, 2}).                                         8> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+9> l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+9> lab8_sol:if_perimeter({sq  circle, 2 1}[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C.
+6.28318
+10>     10> lab8_sol:if_perimeter({circle, 1}).                                       10> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+11>     11> c(lab8_sol).                11> lab8_sol:case_perimeter({circle, 1}[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C.
+6.28318
+12>     12> lab8_sol:case_perimeter({circle, 1}).                                         12> c(lab8_sol).
+lab8_sol.erl:24: function perimeter/1 already defined
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:43: Warning: variable 'Points' is unused
+error
+13> q()[C[C.
+ok
+14> [?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ erl
+[?2004lErlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Eshell V11.1.8  (abort with ^G)
+1> c(lab_s   b8_sol)[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:24: function perimeter/1 already defined
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:43: Warning: variable 'Points' is unused
+error
+2>    2> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:43: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+3> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:43: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+4>    4> c(lab8_sol).
+lab8_sol.erl:47: syntax error before: 'end'
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+5>    5> c(lab8_sol).
+lab8_sol.erl:47: syntax error before: 'end'
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+6>    6> c(lab8_sol).
+lab8_sol.erl:45: illegal pattern
+lab8_sol.erl:46: illegal pattern
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+7>    7> c(lab8_sol).
+lab8_sol.erl:45: syntax error before: 'when'
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+8>    8> c(lab8_sol).
+lab8_sol.erl:48: variable '_' is unbound
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+9>    9> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+10>     10> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+11>     11> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+12> lab8_sol:letter_grade(91).
+'A'
+13> lab8_sol:letter_grade(90).
+'B'
+14> lab8_sol:letter_grade(81).
+'B'
+15> lab8_sol:letter_grade(80).
+'C'
+16>  lab8_sol:letter_grade(75).
+'C'
+17> lab8_sol:letter_grade(65).
+'D'
+18> lab8_sol:letter_grade(55).
+'F'
+19>     19> lab8_sol:letter_grade(55).                              19> c(lab8_sol:0  0
+19> .
+* 2: syntax error before: '.'
+19>     19> .     19> c(l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+19> c(ls ab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:54: head mismatch
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+error
+20>     20> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:51: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+21>     21> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+{ok,lab8_sol}
+22>     22> c(lab8_sol).
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:51: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+23> lab8_sol:letter_grade(91).
+'A'
+24> lab8_sol:letter_grade(90).
+'B'
+25> lab8_sol:letter_grade(81).
+'B'
+26> lab8_sol:letter_grade(80).
+'C'
+27> lab8_sol:letter_grade(75).
+'C'
+28> lab8_sol:letter_grade(65).
+'D'
+29> lab8_sol:letter_grade(55).
+'F'
+30>     30> lab8_sol:letter_grade(55).                              30> lab8_sol:letter_grade(65).                              30> lab8_sol:letter_grade(75).                              30> lab8_sol:letter_grade(80).                              30> lab8_sol:letter_grade(81).                              30> lab8_sol:letter_grade(90).                              30> lab8_sol:letter_grade(91).                              30> c(lab8_sol).                30> lab8_sol:letter_grade(91).iletter_grade(91).fletter_grade(91)._letter_grade(91).[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+'A'
+31>     31> lab8_sol:if_letter_grade(91).). 0).[C[C
+'B'
+32>     32> lab8_sol:if_letter_grade(90).). ). 8).1).[C[C
+'B'
+33>     33> lab8_sol:if_letter_grade(81).). 0).[C[C
+'C'
+34>     34> lab8_sol:if_letter_grade(80).). ). 7).5).[C[C
+'C'
+35>     35> lab8_sol:if_letter_grade(75).5). 65).[C[C[C
+'D'
+36>     36> lab8_sol:if_letter_grade(65).5). 55).[C[C[C
+'F'
+37> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:51: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+38> Shapes = lab8_sol: sh  :s
+shapes_data/0        start_data_server/1  stop_data_server/1   
+
+38> Shapes = lab8_sol:shapes_data()[C[C.
+[{square,2},
+ {circle,1},
+ {square,1},
+ {square,3},
+ {circle,2},
+ {square,4}]
+39> PIDS 1 = l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+39> PID1 = lab8_sol:start_data_server(Shapes)[C[C[C[C[C[C[C[C.
+<0.178.0>
+40> lab8_sol:data_client(PID D1, fun (X)[C[C[C -> X end.)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  )[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[{square,2},
+ {circle,1},
+ {square,1},
+ {square,3},
+ {circle,2},
+ {square,4}]
+41> F = fun ({T, XS  S}[C[C[C[C[C[C)[C[C[C[C[C[C[C[C -> {T, S*3}[C[C[C[C[C[C[C[C end.
+#Fun<erl_eval.44.79398840>
+42> lab8_sol:data_client(PID1, fun (Shapes)[C[C[C[C[C[C[C[C -> lists:M map
+map/2       mapfoldl/3  mapfoldr/3  
+42> lab8_sol:data_client(PID1, fun (Shapes) -> lists:map(F, s Shapes)[C[C[C[C[C[C[C[C[C[C[C end)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[{square,6},
+ {circle,3},
+ {square,3},
+ {square,9},
+ {circle,6},
+ {square,12}]
+43> lab8_sol:stop_data_server(PID1)[C[C[C[C[C[C.
+stop
+44> F2 = fun ({Person, Points{ }[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -> {Person, LetterFrade      G rGrade}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C end.
+* 1: variable 'LetterGrade' is unbound
+45>     45> F2 = fun ({Person, Points}) -> {Person, LetterGrade} end.} end. } end. } end. } end. } end. } end. } end. } end. } end. } end. } end. l} end.a} end.b} end.8} end._} end.s} end.o} end.l} end.,} end.} end. :} end.} end. } end. l} end.,} end.} end. :} end.
+case_perimeter/1     data_client/2        data_server/1        
+grades_data/0        guard_perimeter/1    if_letter_grade/1    
+if_perimeter/1       letter_grade/1       module_info/0        
+module_info/1        perimeter/1          shapes_data/0        
+start_data_server/1  stop_data_server/1   
+45> F2 = fun ({Person, Points}) -> {Person, lab8_sol:} end.
+case_perimeter/1     data_client/2        data_server/1        
+grades_data/0        guard_perimeter/1    if_letter_grade/1    
+if_perimeter/1       letter_grade/1       module_info/0        
+module_info/1        perimeter/1          shapes_data/0        
+start_data_server/1  stop_data_server/1   
+45> F2 = fun ({Person, Points}) -> {Person, lab8_sol:} end.l} end.e} end.t} end.t} end.e} end.r} end._} end.g} end.r} end.a} end.d} end.e} end.(} end.)} end.[C[CP)} end.o)} end.i)} end.t)} end.n)} end.s)} end.)} end. )} end. )} end. n)} end.t)} end.s)} end.[C[C[C[C[C[C[C
+#Fun<erl_eval.44.79398840>
+46> F2({tom, 78}[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C.
+{tom,'C'}
+47> c(l
+lab8_sol                  lcnt                      leex                      
+lists                     local_tcp                 local_udp                 
+log_mf_h                  logger                    logger_backend            
+logger_config             logger_disk_log_h         logger_filters             
+logger_formatter          logger_h_common           logger_handler_watcher    
+logger_olp                logger_proxy              logger_server             
+logger_simple_h           logger_std_h              logger_sup                
+
+47> c(lab8_sol: )[C[C[C[C[C[C[C[C[C[C.
+lab8_sol.erl:6: Warning: export_all flag enabled - all functions will be exported
+lab8_sol.erl:51: Warning: variable 'Points' is unused
+{ok,lab8_sol}
+48> Grades = lab8_sol:grades_data()[C[C.
+[{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+49> PID2 = lab8_sol:d start_data_server(Grades)[C[C[C[C[C[C[C[C.
+<0.193.0>
+50> lab8_sol:data_client(PID2, fun (X)[C[C[C -> X end)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+51> lab8_sol:data_
+data_client/2  data_server/1  
+51> lab8_sol:data_
+data_client/2  data_server/1  
+51> lab8_sol:data_client(PID2, letter_grades()[C[C              ab8_sol, :letter_grade()[C[C Points)[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+* 1: variable 'Points' is unbound
+52>     52> lab8_sol:data_client(PID2, lab8_sol:letter_grade(Points)).[C). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). ). f).u).n).().G).r).a).d).e).s).). ). ). ). ). ). ).  ).().G).r).a).d).e).s).)).[C[C[C[C[C[C[C[C ).-).>). ).l).i).s).t).s).:).m).a).p).
+map/2       mapfoldl/3  mapfoldr/3  
+52> lab8_sol:data_client(PID2, fun (Grades) -> lists:map).().l).a).b).8)._).s).o).l).:).l).e).t).t).e).r)._).g).r).a).d).e).().P).o).i).t).n).s).). ). ). n).t).s).)).[C[C[C[C[C[C[C[C,). ).G).r).a).d).e).s).)).[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+* 1: syntax error before: ')'
+52>     52> lab8_sol:data_client(PID2, fun (Grades) -> lists:map(lab8_sol:letter_grade(Points), Grades)).).  ).e).n).d).[C) end).[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+* 1: variable 'Points' is unbound
+53>     53> lab8_sol:data_client(PID2, fun (Grades) -> lists:map(lab8_sol:letter_grade(Points), Grades) end).                                                                                                     53> p(  h()[C[C.
+33: lab8_sol:if_letter_grade(80)
+-> 'C'
+34: lab8_sol:if_letter_grade(75)
+-> 'C'
+35: lab8_sol:if_letter_grade(65)
+-> 'D'
+36: lab8_sol:if_letter_grade(55)
+-> 'F'
+37: c(lab8_sol)
+-> {ok,lab8_sol}
+38: Shapes = lab8_sol:shapes_data()
+-> [{square,2},
+    {circle,1},
+    {square,1},
+    {square,3},
+    {circle,2},
+    {square,4}]
+39: PID1 = lab8_sol:start_data_server(Shapes)
+-> <0.178.0>
+40: lab8_sol:data_client(PID1,
+                         fun(X) ->
+                                X
+                         end)
+-> [{square,2},
+    {circle,1},
+    {square,1},
+    {square,3},
+    {circle,2},
+    {square,4}]
+41: F = fun({T, S}) ->
+               {T, S * 3}
+        end
+-> #Fun<erl_eval.44.79398840>
+42: lab8_sol:data_client(PID1,
+                         fun(Shapes) ->
+                                lists:map(F, Shapes)
+                         end)
+-> [{square,6},
+    {circle,3},
+    {square,3},
+    {square,9},
+    {circle,6},
+    {square,12}]
+43: lab8_sol:stop_data_server(PID1)
+-> stop
+44: F2 =
+        fun({Person, Points}) ->
+               {Person, LetterGrade}
+        end
+-> {'EXIT',{unbound_var,'LetterGrade'}}
+45: F2 =
+        fun({Person, Points}) ->
+               {Person, lab8_sol:letter_grade(Points)}
+        end
+-> #Fun<erl_eval.44.79398840>
+46: F2({tom, 78})
+-> {tom,'C'}
+47: c(lab8_sol)
+-> {ok,lab8_sol}
+48: Grades = lab8_sol:grades_data()
+-> [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+49: PID2 = lab8_sol:start_data_server(Grades)
+-> <0.193.0>
+50: lab8_sol:data_client(PID2,
+                         fun(X) ->
+                                X
+                         end)
+-> [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+51: lab8_sol:data_client(PID2, lab8_sol:letter_grade(Points))
+-> {'EXIT',{unbound_var,'Points'}}
+52: lab8_sol:data_client(PID2,
+                         fun(Grades) ->
+                                lists:map(lab8_sol:letter_grade(Points),
+                                          Grades)
+                         end)
+-> {'EXIT',{unbound_var,'Points'}}
+ok
+54> p(  b(F2)[C[C[C[C.
+** exception error: undefined shell command b/1
+55>     55> b(F2).(F2). p(F2).[C[C[C[C[C
+** exception error: undefined shell command p/1
+56> help()[C[C.
+** shell internal commands **
+b()        -- display all variable bindings
+e(N)       -- repeat the expression in query <N>
+f()        -- forget all variable bindings
+f(X)       -- forget the binding of variable X
+h()        -- history
+h(Mod)     -- help about module
+h(Mod,Func)-- help about function in module
+h(Mod,Func,Arity) -- help about function with arity in module
+ht(Mod)    -- help about a module's types
+ht(Mod,Type) -- help about type in module
+ht(Mod,Type,Arity) -- help about type with arity in module
+hcb(Mod)    -- help about a module's callbacks
+hcb(Mod,CB) -- help about callback in module
+hcb(Mod,CB,Arity) -- help about callback with arity in module
+history(N) -- set how many previous commands to keep
+results(N) -- set how many previous command results to keep
+catch_exception(B) -- how exceptions are handled
+v(N)       -- use the value of query <N>
+rd(R,D)    -- define a record
+rf()       -- remove all record information
+rf(R)      -- remove record information about R
+rl()       -- display all record information
+rl(R)      -- display record information about R
+rp(Term)   -- display Term using the shell's record information
+rr(File)   -- read record information from File (wildcards allowed)
+rr(F,R)    -- read selected record information from file(s)
+rr(F,R,O)  -- read selected record information with options
+** commands in module c **
+bt(Pid)    -- stack backtrace for a process
+c(Mod)     -- compile and load module or file <Mod>
+cd(Dir)    -- change working directory
+flush()    -- flush any messages sent to the shell
+help()     -- help info
+h(M)       -- module documentation
+h(M,F)     -- module function documentation
+h(M,F,A)   -- module function arity documentation
+i()        -- information about the system
+ni()       -- information about the networked system
+i(X,Y,Z)   -- information about pid <X,Y,Z>
+l(Module)  -- load or reload module
+lm()       -- load all modified modules
+lc([File]) -- compile a list of Erlang modules
+ls()       -- list files in the current directory
+ls(Dir)    -- list files in directory <Dir>
+m()        -- which modules are loaded
+m(Mod)     -- information about module <Mod>
+mm()       -- list all modified modules
+memory()   -- memory allocation information
+memory(T)  -- memory allocation information of type <T>
+nc(File)   -- compile and load code in <File> on all nodes
+nl(Module) -- load module on all nodes
+pid(X,Y,Z) -- convert X,Y,Z to a Pid
+pwd()      -- print working directory
+q()        -- quit - shorthand for init:stop()
+regs()     -- information about registered processes
+nregs()    -- information about all registered processes
+uptime()   -- print node uptime
+xm(M)      -- cross reference check a module
+y(File)    -- generate a Yecc parser
+** commands in module i (interpreter interface) **
+ih()       -- print help for the i module
+true
+57> b()[C[C.
+F = fun({T, S}) ->
+           {T, S * 3}
+    end
+F2 =
+    fun({Person, Points}) ->
+           {Person, lab8_sol:letter_grade(Points)}
+    end
+Grades = [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+PID1 = <0.178.0>
+PID2 = <0.193.0>
+Shapes = [{square,2},
+          {circle,1},
+          {square,1},
+          {square,3},
+          {circle,2},
+          {square,4}]
+ok
+58> lab8_sol:data_client(PID2, fun(Grades)[C[C[C[C[C[C[C[C -> lists:map(F2, Grades)[C[C[C[C[C[C[C[C[C[C[C[C end_ )[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+[{bill,'B'},
+ {sue,'A'},
+ {john,'B'},
+ {joe,'C'},
+ {mary,'D'},
+ {tom,'F'}]
+59> lab8_sol:d s
+shapes_data/0        start_data_server/1  stop_data_server/1   
+
+59> lab8_sol:st
+start_data_server/1  stop_data_server/1   
+59> lab8_sol:stop_data_server()[C[C PID2)[C[C[C[C[C[C.
+stop
+60> q()[C[C.
+ok
+61> erl
+[?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ 
+[?2004l[?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ erl
+[?2004lErlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Eshell V11.1.8  (abort with ^G)
+1> Grades = [ {bill, 82}, {sue, 95}, { john, 85} ].
+[{bill,82},{sue,95},{john,85}]
+2> Grades 2 3 = [C[C    3.GGrade3.rGrade3.aGrade3.Grade3. Grade3. Grade3. [C[C[C[C[C[C[C       [{B bill      {bill, 82}[C[C[C[C[C[C[C[C[C[C, {sur,  e, 95}[C[C[C[C[C[C[C[C[C, {john, 85}[C[C[C[C[C[C[C[C[C[C ][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.  = Grades.[C ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades.  ] = Grades. G ] = Grades.r ] = Grades.a ] = Grades.d ] = Grades.e ] = Grades.3 ] = Grades.[C[C[C[C[C[C[C[C[C[C[C[C
+[{bill,82},{sue,95},{john,85}]
+3> Grade3.
+{john,85}
+4> PID2 = lab8_sol:st
+start_data_server/1  stop_data_server/1   
+4> PID2 = lab8_sol:start_data_server(Grades)[C[C[C[C[C[C[C[C.                                          [{bill, Points1}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, {sue,                       _, Poitns   nts1{ }[C[C[C[C[C[C[C[C[C[C[C[C, {_, Poitns   tns   nts2}[C[C[C[C[C[C[C[C[C[C[C[C, {_, Points3}[C[C[C[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C = Grades.
+[{bill,82},{sue,95},{john,85}]
+5> Points = [Points1, Points2, Points3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+"R_U"
+6> io:formate("~w~n", [Points][C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+** exception error: undefined function io:formate/2
+7>    7> io:formate("~w~n", [Points]).("~w~n", [Points]). [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[82,95,85]
+ok
+8>    8> io:format("~w~n", [Points]).                               8> io:formate("~w~n", [Points]).                                8> Points = [Points1, Points2, Points3].                                        8> [{_, Points1}, {_, Points2}, {_, Points3}] = Grades.                                                       8> Grade3.          8> [{_, Points1}, {_, Points2}, {_, Points3}] = Grades.[C, Points1}, {_, Points2}, {_, Points3}] = Grades. A, Points1}, {_, Points2}, {_, Points3}] = Grades.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, Points2}, {_, Points3}] = Grades. B, Points2}, {_, Points3}] = Grades.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, Points3}] = Grades. C, Points3}] = Grades.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[{bill,82},{sue,95},{john,85}]
+9> Grades2 = [{A, Points1+  + 2}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, {B, Poitns   nts2 + 2}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, {C, Points3 + 2}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.                                                                    9> [{A, Points1}, {B, Points2}, {C, Points3}] = Grades.                                                       9> Grades2 = [{A, Points1 + 2}, {B, Points2 + 2}, {C, Points3 + 2}].
+[{bill,84},{sue,97},{john,87}]
+10> q()[C[C   F2 = fun ({Person, Points}) -> {Person, lab8_sol:letter_grade(Points)} end.
+#Fun<erl_eval.44.79398840>
+11> Grades = lab8_sol:grades_data().
+** exception error: no match of right hand side value 
+                    [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+12> q()[C[C.
+ok
+13> erl
+13> [?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ erl
+[?2004lErlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Eshell V11.1.8  (abort with ^G)
+1> F2 = fun ({Person, Points}) -> {Person, lab8_sol:letter_grade(Points)} end.
+#Fun<erl_eval.44.79398840>
+2> Grades = lab8_sol:grades_data().
+[{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+3> PID2 = lab8_sol:start_data_server(Grades).
+<0.84.0>
+4> lab8_sol:data_client(PID2, fun (X) -> X end).
+[{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+5> lab8_sol:data_client(PID2, fun(Grades) -> lists:map(F2, Grades) end).
+[{bill,'B'},
+ {sue,'A'},
+ {john,'B'},
+ {joe,'C'},
+ {mary,'D'},
+ {tom,'F'}]
+6> lab8_sol:stop_data_server(PID2).
+stop
+7> c()[C[C.
+** exception error: undefined shell command c/0
+8> help()[C[C.
+** shell internal commands **
+b()        -- display all variable bindings
+e(N)       -- repeat the expression in query <N>
+f()        -- forget all variable bindings
+f(X)       -- forget the binding of variable X
+h()        -- history
+h(Mod)     -- help about module
+h(Mod,Func)-- help about function in module
+h(Mod,Func,Arity) -- help about function with arity in module
+ht(Mod)    -- help about a module's types
+ht(Mod,Type) -- help about type in module
+ht(Mod,Type,Arity) -- help about type with arity in module
+hcb(Mod)    -- help about a module's callbacks
+hcb(Mod,CB) -- help about callback in module
+hcb(Mod,CB,Arity) -- help about callback with arity in module
+history(N) -- set how many previous commands to keep
+results(N) -- set how many previous command results to keep
+catch_exception(B) -- how exceptions are handled
+v(N)       -- use the value of query <N>
+rd(R,D)    -- define a record
+rf()       -- remove all record information
+rf(R)      -- remove record information about R
+rl()       -- display all record information
+rl(R)      -- display record information about R
+rp(Term)   -- display Term using the shell's record information
+rr(File)   -- read record information from File (wildcards allowed)
+rr(F,R)    -- read selected record information from file(s)
+rr(F,R,O)  -- read selected record information with options
+** commands in module c **
+bt(Pid)    -- stack backtrace for a process
+c(Mod)     -- compile and load module or file <Mod>
+cd(Dir)    -- change working directory
+flush()    -- flush any messages sent to the shell
+help()     -- help info
+h(M)       -- module documentation
+h(M,F)     -- module function documentation
+h(M,F,A)   -- module function arity documentation
+i()        -- information about the system
+ni()       -- information about the networked system
+i(X,Y,Z)   -- information about pid <X,Y,Z>
+l(Module)  -- load or reload module
+lm()       -- load all modified modules
+lc([File]) -- compile a list of Erlang modules
+ls()       -- list files in the current directory
+ls(Dir)    -- list files in directory <Dir>
+m()        -- which modules are loaded
+m(Mod)     -- information about module <Mod>
+mm()       -- list all modified modules
+memory()   -- memory allocation information
+memory(T)  -- memory allocation information of type <T>
+nc(File)   -- compile and load code in <File> on all nodes
+nl(Module) -- load module on all nodes
+pid(X,Y,Z) -- convert X,Y,Z to a Pid
+pwd()      -- print working directory
+q()        -- quit - shorthand for init:stop()
+regs()     -- information about registered processes
+nregs()    -- information about all registered processes
+uptime()   -- print node uptime
+xm(M)      -- cross reference check a module
+y(File)    -- generate a Yecc parser
+** commands in module i (interpreter interface) **
+ih()       -- print help for the i module
+true
+9> f()[C[C.
+ok
+10> f(x X)[C[C[C.
+ok
+11> q()[C[C   b()[C[C.
+ok
+12> h()[C[C.
+1: F2 =
+       fun({Person, Points}) ->
+              {Person, lab8_sol:letter_grade(Points)}
+       end
+-> #Fun<erl_eval.44.79398840>
+2: Grades = lab8_sol:grades_data()
+-> [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+3: PID2 = lab8_sol:start_data_server(Grades)
+-> <0.84.0>
+4: lab8_sol:data_client(PID2,
+                        fun(X) ->
+                               X
+                        end)
+-> [{bill,82.0},{sue,95},{john,85},{joe,73},{mary,65},{tom,55}]
+5: lab8_sol:data_client(PID2,
+                        fun(Grades) ->
+                               lists:map(F2, Grades)
+                        end)
+-> [{bill,'B'},
+    {sue,'A'},
+    {john,'B'},
+    {joe,'C'},
+    {mary,'D'},
+    {tom,'F'}]
+6: lab8_sol:stop_data_server(PID2)
+-> stop
+7: c()
+-> {'EXIT',{{shell_undef,c,0,[]},
+            [{shell,shell_undef,2,[{file,"shell.erl"},{line,1070}]},
+             {erl_eval,local_func,6,[{file,"erl_eval.erl"},{line,572}]},
+             {shell,exprs,7,[{file,"shell.erl"},{line,686}]},
+             {shell,eval_exprs,7,[{file,"shell.erl"},{line,642}]},
+             {shell,eval_loop,3,[{file,"shell.erl"},{line,627}]}]}}
+8: help()
+-> true
+9: f()
+-> ok
+10: f(X)
+-> ok
+11: b()
+-> ok
+ok
+13> q()[C[C.
+ok
+14> [?2004htman1@remote03:~/cs471/projects/i471b/submit/lab8$ exit
+[?2004lexit
+
+Script done on 2022-05-01 23:42:04-04:00 [COMMAND_EXIT_CODE="0"]
